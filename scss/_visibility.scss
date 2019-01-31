@@ -1,0 +1,24 @@
+// Basic hiding classes
+.hide {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+
+// Screen reader visibility classes
+// Need a "hide-for-sr" class? Add aria-hidden='true' to the element
+.show-for-sr,
+.show-on-focus {
+  @include element-invisible;
+}
+
+// Only display the element when it's focused
+.show-on-focus {
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
