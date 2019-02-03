@@ -2,12 +2,17 @@
 @import "util/util";
 @import "base/base";
 @import "tachyons/tachyons";
-@import "fonts";
 
-
-@include base-styles;
+// @include base-styles;
+@include normalize;
 @include font-faces;
+@include global-styles;
+@include typography;
+// @include forms;
+// @include base-table;
+// @include print-styles;
 @include tachyons;
+
 
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1rem;
@@ -55,11 +60,7 @@ p {
   margin-right: 1rem;
 }
 
-.measure {
-  width: 35em;
-}
-
-ul {
-  padding-left: 0;
-  list-style-position: inside;
-}
+// ul {
+//   padding-left: 0;
+//   list-style-position: inside;
+// }
