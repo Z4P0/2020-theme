@@ -332,7 +332,7 @@ body {
   color: #333;
   font-family: "Source Sans Variable", Arial, sans-serif;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.618;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -413,6 +413,7 @@ small, .text_small {
   font-size: 0.8em; }
 
 p {
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem; }
 
 .hide {
@@ -456,3 +457,10 @@ p {
 
 .feather {
   margin-right: 1rem; }
+
+.measure {
+  width: 35em; }
+
+ul {
+  padding-left: 0;
+  list-style-position: inside; }
