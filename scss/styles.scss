@@ -4,6 +4,7 @@
 @import "tachyons/tachyons";
 
 // @include base-styles;
+// --
 @include normalize;
 @include font-faces;
 @include global-styles;
@@ -11,7 +12,42 @@
 // @include forms;
 // @include base-table;
 // @include print-styles;
-@include tachyons;
+
+// @include tachyons;
+// --
+// @include background-position;
+// @include background-size;
+// @include borders;
+// @include clears;
+// @include coordinates;
+@include display;
+@include flexbox;
+@include floats;
+// @include font-family;
+// @include font-style;
+// @include font-weight;
+// @include heights;
+@include layout-utilities;
+// @include line-height;
+// @include lists;
+@include max-widths;
+// @include negative-margins;
+// @include overflow;
+// @include position;
+// @include foundation-responsive-embed;
+@include skins;
+@include spacing;
+@include text-align;
+// @include text-transform;
+@include type-scale;
+@include typography-classes;
+// @include vertical-align;
+@include visibility;
+// @include white-space;
+@include widths;
+// @include word-break;
+// @include z-index;
+
 
 
 h1, h2, h3, h4, h5 {
