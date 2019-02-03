@@ -1,0 +1,93 @@
+// COORDINATES
+// Docs: http://tachyons.io/docs/layout/position/
+
+// Use in combination with the position module.
+
+// Base:
+//   top
+//   bottom
+//   right
+//   left
+
+// Modifiers:
+//   -0  = literal value 0
+//   -1  = literal value 1
+//   -2  = literal value 2
+//   --1 = literal value -1
+//   --2 = literal value -2
+
+
+
+@mixin coordinates {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+
+        .top-0-#{$bpLetter}     { top:   0; }
+        .left-0-#{$bpLetter}    { left:  0; }
+        .right-0-#{$bpLetter}   { right: 0; }
+        .bottom-0-#{$bpLetter}  { bottom: 0; }
+        .top-1-#{$bpLetter}     { top:   1rem; }
+        .left-1-#{$bpLetter}    { left:  1rem; }
+        .right-1-#{$bpLetter}   { right: 1rem; }
+        .bottom-1-#{$bpLetter}  { bottom: 1rem; }
+        .top-2-#{$bpLetter}     { top:   2rem; }
+        .left-2-#{$bpLetter}    { left:  2rem; }
+        .right-2-#{$bpLetter}   { right: 2rem; }
+        .bottom-2-#{$bpLetter}  { bottom: 2rem; }
+        .top--1-#{$bpLetter}    { top:    -1rem; }
+        .right--1-#{$bpLetter}  { right:  -1rem; }
+        .bottom--1-#{$bpLetter} { bottom: -1rem; }
+        .left--1-#{$bpLetter}   { left:   -1rem; }
+        .top--2-#{$bpLetter}    { top:    -2rem; }
+        .right--2-#{$bpLetter}  { right:  -2rem; }
+        .bottom--2-#{$bpLetter} { bottom: -2rem; }
+        .left--2-#{$bpLetter}   { left:   -2rem; }
+        .absolute--fill-#{$bpLetter} {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      // default, mobile styles
+      @else {
+        .top-0    { top:    0; }
+        .right-0  { right:  0; }
+        .bottom-0 { bottom: 0; }
+        .left-0   { left:   0; }
+
+        .top-1    { top:    1rem; }
+        .right-1  { right:  1rem; }
+        .bottom-1 { bottom: 1rem; }
+        .left-1   { left:   1rem; }
+
+        .top-2    { top:    2rem; }
+        .right-2  { right:  2rem; }
+        .bottom-2 { bottom: 2rem; }
+        .left-2   { left:   2rem; }
+
+        .top--1    { top:    -1rem; }
+        .right--1  { right:  -1rem; }
+        .bottom--1 { bottom: -1rem; }
+        .left--1   { left:   -1rem; }
+
+        .top--2    { top:    -2rem; }
+        .right--2  { right:  -2rem; }
+        .bottom--2 { bottom: -2rem; }
+        .left--2   { left:   -2rem; }
+
+        .absolute--fill {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+// OVERFLOW
+
+
+
+@mixin overflow {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+
+        .overflow-visible-#{$bpLetter}   { overflow: visible; }
+        .overflow-hidden-#{$bpLetter}    { overflow: hidden; }
+        .overflow-scroll-#{$bpLetter}    { overflow: scroll; }
+        .overflow-auto-#{$bpLetter}      { overflow: auto; }
+
+        .overflow-x-visible-#{$bpLetter} { overflow-x: visible; }
+        .overflow-x-hidden-#{$bpLetter}  { overflow-x: hidden; }
+        .overflow-x-scroll-#{$bpLetter}  { overflow-x: scroll; }
+        .overflow-x-auto-#{$bpLetter}    { overflow-x: auto; }
+
+        .overflow-y-visible-#{$bpLetter} { overflow-y: visible; }
+        .overflow-y-hidden-#{$bpLetter}  { overflow-y: hidden; }
+        .overflow-y-scroll-#{$bpLetter}  { overflow-y: scroll; }
+        .overflow-y-auto-#{$bpLetter}    { overflow-y: auto; }
+      }
+      // default, mobile styles
+      @else {
+        .overflow-visible   { overflow: visible; }
+        .overflow-hidden    { overflow: hidden; }
+        .overflow-scroll    { overflow: scroll; }
+        .overflow-auto      { overflow: auto; }
+
+        .overflow-x-visible { overflow-x: visible; }
+        .overflow-x-hidden  { overflow-x: hidden; }
+        .overflow-x-scroll  { overflow-x: scroll; }
+        .overflow-x-auto    { overflow-x: auto; }
+
+        .overflow-y-visible { overflow-y: visible; }
+        .overflow-y-hidden  { overflow-y: hidden; }
+        .overflow-y-scroll  { overflow-y: scroll; }
+        .overflow-y-auto    { overflow-y: auto; }
+      }
+    }
+  }
+}

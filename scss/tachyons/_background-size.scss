@@ -1,0 +1,27 @@
+// BACKGROUND SIZE
+// Docs: http://tachyons.io/docs/themes/background-size/
+
+// Often used in combination with background image set as an inline style
+// on an html element.
+
+
+
+@mixin background-size {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+        .bg-cover-#{$bpLetter}    { background-size: cover; }
+        .bg-contain-#{$bpLetter}  { background-size: contain; }
+      }
+      // default styles, mobile
+      @else {
+        .bg-cover     { background-size: cover; }
+        .bg-contain   { background-size: contain; }
+      }
+    }
+  }
+}

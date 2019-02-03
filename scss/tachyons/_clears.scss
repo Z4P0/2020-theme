@@ -1,0 +1,37 @@
+// CLEARFIX
+// http://tachyons.io/docs/layout/clearfix/
+
+// Nicolas Gallaghers Clearfix solution
+//   Ref: http://nicolasgallagher.com/micro-clearfix-hack/
+
+
+
+@mixin clears {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+
+        .cl-#{$bpLetter} { clear: left; }
+        .cr-#{$bpLetter} { clear: right; }
+        .cb-#{$bpLetter} { clear: both; }
+        .cn-#{$bpLetter} { clear: none; }
+      }
+      // default, mobile styles
+      @else {
+        .cf:before,
+        .cf:after { content: " "; display: table; }
+        .cf:after { clear: both; }
+        .cf {       *zoom: 1; }
+
+        .cl { clear: left; }
+        .cr { clear: right; }
+        .cb { clear: both; }
+        .cn { clear: none; }
+      }
+    }
+  }
+}

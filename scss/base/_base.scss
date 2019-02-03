@@ -1,0 +1,16 @@
+@import "normalize";
+@import "global";
+@import "typography";
+@import "forms/forms";
+@import "table";
+@import "print";
+
+
+@mixin base-styles {
+  @include normalize;
+  @include global-styles;
+  @include typography;
+  @include forms;
+  @include base-table;
+  @include print-styles;
+}

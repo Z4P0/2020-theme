@@ -1,0 +1,24 @@
+// Modulename
+// ==================================================
+
+// Use this scaffolding to create or extend your own modules with tachyons
+// style architecture.
+
+
+@mixin honeycomb-module {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+        .class-#{$bpLetter} {background-position: center center; }
+      }
+      // default, mobile styles
+      @else {
+        .class {background-position: center center; }
+      }
+    }
+  }
+}

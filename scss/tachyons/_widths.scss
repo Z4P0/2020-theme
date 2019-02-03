@@ -1,0 +1,97 @@
+// WIDTHS
+// Docs: http://tachyons.io/docs/layout/widths/
+
+// Base:
+//   w = width
+
+// Modifiers
+//   1 = 1st step in width scale
+//   2 = 2nd step in width scale
+//   3 = 3rd step in width scale
+//   4 = 4th step in width scale
+//   5 = 5th step in width scale
+
+//   -10  = literal value 10%
+//   -20  = literal value 20%
+//   -25  = literal value 25%
+//   -30  = literal value 30%
+//   -33  = literal value 33%
+//   -34  = literal value 34%
+//   -40  = literal value 40%
+//   -50  = literal value 50%
+//   -60  = literal value 60%
+//   -70  = literal value 70%
+//   -75  = literal value 75%
+//   -80  = literal value 80%
+//   -90  = literal value 90%
+//   -100 = literal value 100%
+
+//   -third      = 100% / 3 (Not supported in opera mini or IE8)
+//   -two-thirds = 100% / 1.5 (Not supported in opera mini or IE8)
+//   -auto       = string value auto
+
+
+
+@mixin widths {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+
+        .w1-#{$bpLetter} {    width: $width-1; }
+        .w2-#{$bpLetter} {    width: $width-2; }
+        .w3-#{$bpLetter} {    width: $width-3; }
+        .w4-#{$bpLetter} {    width: $width-4; }
+        .w5-#{$bpLetter} {    width: $width-5; }
+        .w-10-#{$bpLetter} {  width:  10%; }
+        .w-20-#{$bpLetter} {  width:  20%; }
+        .w-25-#{$bpLetter} {  width:  25%; }
+        .w-30-#{$bpLetter} {  width:  30%; }
+        .w-33-#{$bpLetter} {  width:  33%; }
+        .w-34-#{$bpLetter} {  width:  34%; }
+        .w-40-#{$bpLetter} {  width:  40%; }
+        .w-50-#{$bpLetter} {  width:  50%; }
+        .w-60-#{$bpLetter} {  width:  60%; }
+        .w-70-#{$bpLetter} {  width:  70%; }
+        .w-75-#{$bpLetter} {  width:  75%; }
+        .w-80-#{$bpLetter} {  width:  80%; }
+        .w-90-#{$bpLetter} {  width:  90%; }
+        .w-100-#{$bpLetter} { width: 100%; }
+        .w-third-#{$bpLetter} { width: (100% / 3); }
+        .w-two-thirds-#{$bpLetter} { width: (100% / 1.5); }
+        .w-auto-#{$bpLetter} { width: auto; }
+      }
+      // default, mobile styles
+      @else {
+        /* Width Scale */
+        .w1 {    width: $width-1; }
+        .w2 {    width: $width-2; }
+        .w3 {    width: $width-3; }
+        .w4 {    width: $width-4; }
+        .w5 {    width: $width-5; }
+
+        .w-10 {  width:  10%; }
+        .w-20 {  width:  20%; }
+        .w-25 {  width:  25%; }
+        .w-30 {  width:  30%; }
+        .w-33 {  width:  33%; }
+        .w-34 {  width:  34%; }
+        .w-40 {  width:  40%; }
+        .w-50 {  width:  50%; }
+        .w-60 {  width:  60%; }
+        .w-70 {  width:  70%; }
+        .w-75 {  width:  75%; }
+        .w-80 {  width:  80%; }
+        .w-90 {  width:  90%; }
+        .w-100 { width: 100%; }
+
+        .w-third { width: (100% / 3); }
+        .w-two-thirds { width: (100% / 1.5); }
+        .w-auto { width: auto; }
+      }
+    }
+  }
+}

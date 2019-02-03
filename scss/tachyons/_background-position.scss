@@ -1,0 +1,50 @@
+// BACKGROUND POSITION
+
+// Base:
+// bg = background
+
+// Modifiers:
+// -center = center center
+// -top = top center
+// -right = center right
+// -bottom = bottom center
+// -left = center left
+
+
+
+@mixin background-position {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+
+        .bg-center-#{$bpLetter},
+        .bg-top-#{$bpLetter},
+        .bg-right-#{$bpLetter},
+        .bg-bottom-#{$bpLetter},
+        .bg-left-#{$bpLetter} {
+          background-repeat: no-repeat;
+        }
+        .bg-center-#{$bpLetter}   { background-position: center center; }
+        .bg-top-#{$bpLetter}      { background-position: top center; }
+        .bg-right-#{$bpLetter}    { background-position: center right; }
+        .bg-bottom-#{$bpLetter}   { background-position: bottom center; }
+        .bg-left-#{$bpLetter}     { background-position: center left; }
+      }
+      // default, mobile styles
+      @else {
+        .bg-center, .bg-top, .bg-right, .bg-bottom, .bg-left {
+          background-repeat: no-repeat;
+        }
+        .bg-center  { background-position: center center; }
+        .bg-top     { background-position: top center; }
+        .bg-right   { background-position: center right; }
+        .bg-bottom  { background-position: bottom center; }
+        .bg-left    { background-position: center left; }
+      }
+    }
+  }
+}

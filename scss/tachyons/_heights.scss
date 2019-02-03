@@ -1,0 +1,85 @@
+// HEIGHTS
+// Docs: http://tachyons.io/docs/layout/heights/
+
+// Base:
+//   h = height
+//   min-h = min-height
+//   min-vh = min-height vertical screen height
+//   vh = vertical screen height
+
+// Modifiers
+//   1 = 1st step in height scale
+//   2 = 2nd step in height scale
+//   3 = 3rd step in height scale
+//   4 = 4th step in height scale
+//   5 = 5th step in height scale
+
+//   -25   = literal value 25%
+//   -50   = literal value 50%
+//   -75   = literal value 75%
+//   -100  = literal value 100%
+
+//   -auto = string value of auto
+//   -inherit = string value of inherit
+
+
+
+@mixin heights {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+
+        .h1-#{$bpLetter} { height: $height-1; }
+        .h2-#{$bpLetter} { height: $height-2; }
+        .h3-#{$bpLetter} { height: $height-3; }
+        .h4-#{$bpLetter} { height: $height-4; }
+        .h5-#{$bpLetter} { height: $height-5; }
+        .h-25-#{$bpLetter} {  height:  25%; }
+        .h-50-#{$bpLetter} {  height:  50%; }
+        .h-75-#{$bpLetter} {  height:  75%; }
+        .h-100-#{$bpLetter} { height: 100%; }
+        .min-h-100-#{$bpLetter} { min-height: 100%; }
+        .vh-25-#{$bpLetter} {  height:  25vh; }
+        .vh-50-#{$bpLetter} {  height:  50vh; }
+        .vh-75-#{$bpLetter} {  height:  75vh; }
+        .vh-100-#{$bpLetter} { height: 100vh; }
+        .min-vh-100-#{$bpLetter} { min-height: 100vh; }
+        .h-auto-#{$bpLetter} {     height: auto; }
+        .h-inherit-#{$bpLetter} {  height: inherit; }
+      }
+      // default, mobile styles
+      @else {
+        /* Height Scale */
+        .h1 { height: $height-1; }
+        .h2 { height: $height-2; }
+        .h3 { height: $height-3; }
+        .h4 { height: $height-4; }
+        .h5 { height: $height-5; }
+
+        /* Height Percentages - Based off of height of parent */
+        .h-25 {  height:  25%; }
+        .h-50 {  height:  50%; }
+        .h-75 {  height:  75%; }
+        .h-100 { height: 100%; }
+
+        .min-h-100 { min-height: 100%; }
+
+        /* Screen Height Percentage */
+        .vh-25 {  height:  25vh; }
+        .vh-50 {  height:  50vh; }
+        .vh-75 {  height:  75vh; }
+        .vh-100 { height: 100vh; }
+
+        .min-vh-100 { min-height: 100vh; }
+
+        /* String Properties */
+        .h-auto {     height: auto; }
+        .h-inherit {  height: inherit; }
+      }
+    }
+  }
+}

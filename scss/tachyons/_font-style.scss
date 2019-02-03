@@ -1,0 +1,26 @@
+// FONT STYLE
+// Docs: http://tachyons.io/docs/typography/font-style/
+
+
+
+@mixin font-style {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+
+        .i#{$bpLetter}         { font-style: italic; }
+        .fs-normal#{$bpLetter} { font-style: normal; }
+
+      }
+      // default, mobile styles
+      @else {
+        .i         { font-style: italic; }
+        .fs-normal { font-style: normal; }
+      }
+    }
+  }
+}

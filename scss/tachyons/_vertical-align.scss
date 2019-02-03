@@ -1,0 +1,27 @@
+// VERTICAL ALIGN
+
+
+
+@mixin vertical-align {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+        .v-base-#{$bpLetter}     { vertical-align: baseline; }
+        .v-mid-#{$bpLetter}      { vertical-align: middle; }
+        .v-top-#{$bpLetter}      { vertical-align: top; }
+        .v-btm-#{$bpLetter}      { vertical-align: bottom; }
+      }
+      // default, mobile styles
+      @else {
+        .v-base     { vertical-align: baseline; }
+        .v-mid      { vertical-align: middle; }
+        .v-top      { vertical-align: top; }
+        .v-btm      { vertical-align: bottom; }
+      }
+    }
+  }
+}

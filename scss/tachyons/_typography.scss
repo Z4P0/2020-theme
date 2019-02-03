@@ -1,0 +1,143 @@
+// TYPOGRAPHY
+// http://tachyons.io/docs/typography/measure/
+
+
+
+/// Default font size for lead paragraphs.
+/// @type Number
+$lead-font-size: $global-font-size * 1.25 !default;
+
+/// Default line height for lead paragraphs.
+/// @type String
+$lead-lineheight: 1.6 !default;
+
+/// Default line height for subheaders.
+/// @type Number
+$subheader-lineheight: 1.4 !default;
+
+/// Default font color for subheaders.
+/// @type Color
+$subheader-color: $dark-gray !default;
+
+/// Default font weight for subheaders.
+/// @type String
+$subheader-font-weight: $global-weight-normal !default;
+
+/// Default top margin for subheaders.
+/// @type Number
+$subheader-margin-top: 0.2rem !default;
+
+/// Default bottom margin for subheaders.
+/// @type Number
+$subheader-margin-bottom: 0.5rem !default;
+
+/// Default font size for statistic numbers.
+/// @type Number
+$stat-font-size: 2.5rem !default;
+
+
+
+@mixin typography-classes {
+
+  /* Book paragraph style - paragraphs are indented with no vertical spacing. */
+  .indent {
+    text-indent: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .small-caps {
+    font-variant: small-caps;
+  }
+
+  /* Combine this class with a width to truncate text (or just leave as is to truncate at width of containing element. */
+
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+  // https://helpx.adobe.com/fonts/using/open-type-syntax.html
+  .small-caps {
+    font-variant: small-caps;
+    font-variant-caps: small-caps;
+    -moz-font-feature-settings: "smcp";
+    -webkit-font-feature-settings: "smcp";
+    font-feature-settings: "smcp";
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    -moz-font-feature-settings: "tnum";
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+  }
+
+
+  // from Foundation
+  // Use to create a subheading under a main header
+  // Make sure you pair the two elements in a <header> element, like this:
+  // <header>
+  //   <h1>Heading</h1>
+  //   <h2>Subheading</h2>
+  // </header>
+  .subheader {
+    margin-top: $subheader-margin-top;
+    margin-bottom: $subheader-margin-bottom;
+
+    font-weight: $subheader-font-weight;
+    line-height: $subheader-lineheight;
+    color: $subheader-color;
+  }
+
+  // Use to style an introductory lead, deck, blurb, etc.
+  .lead {
+    font-size: $lead-font-size;
+    line-height: $lead-lineheight;
+  }
+
+  // Use to style a large number to display a statistic
+  .stat {
+    font-size: $stat-font-size;
+    line-height: 1;
+
+    p + & {
+      margin-top: -1rem;
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    p, ul + & {
+      margin-top: 1.5rem;
+    }
+  }
+
+
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+
+        .measure-#{$bpLetter}          { max-width: $measure; }
+        .measure-wide-#{$bpLetter}     { max-width: $measure-wide; }
+        .measure-narrow-#{$bpLetter}   { max-width: $measure-narrow; }
+      }
+      // default, mobile styles
+      @else {
+        /* Measure is limited to ~66 characters */
+        .measure          { max-width: $measure; }
+        /* Measure is limited to ~80 characters */
+        .measure-wide     { max-width: $measure-wide; }
+        /* Measure is limited to ~45 characters */
+        .measure-narrow   { max-width: $measure-narrow; }
+      }
+    }
+  }
+}

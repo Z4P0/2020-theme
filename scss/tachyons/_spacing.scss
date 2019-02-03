@@ -1,0 +1,487 @@
+// SPACING
+// Docs: http://tachyons.io/docs/layout/spacing/
+
+// An eight step powers of two scale ranging from 0 to 16rem.
+
+// Base:
+//   p = padding
+//   m = margin
+
+// Modifiers:
+//   a = all
+//   h = horizontal
+//   v = vertical
+//   t = top
+//   r = right
+//   b = bottom
+//   l = left
+
+//   0 = none
+//   1 = 1st step in spacing scale
+//   2 = 2nd step in spacing scale
+//   3 = 3rd step in spacing scale
+//   4 = 4th step in spacing scale
+//   5 = 5th step in spacing scale
+//   6 = 6th step in spacing scale
+//   7 = 7th step in spacing scale
+
+
+
+@mixin spacing {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+
+        .pa0-#{$bpLetter} { padding: $spacing-none; }
+        .pa1-#{$bpLetter} { padding: $spacing-extra-small; }
+        .pa2-#{$bpLetter} { padding: $spacing-small; }
+        .pa3-#{$bpLetter} { padding: $spacing-medium; }
+        .pa4-#{$bpLetter} { padding: $spacing-large; }
+        .pa5-#{$bpLetter} { padding: $spacing-extra-large; }
+        .pa6-#{$bpLetter} { padding: $spacing-extra-extra-large; }
+        .pa7-#{$bpLetter} { padding: $spacing-extra-extra-extra-large; }
+
+        .pl0-#{$bpLetter} { padding-left: $spacing-none; }
+        .pl1-#{$bpLetter} { padding-left: $spacing-extra-small; }
+        .pl2-#{$bpLetter} { padding-left: $spacing-small; }
+        .pl3-#{$bpLetter} { padding-left: $spacing-medium; }
+        .pl4-#{$bpLetter} { padding-left: $spacing-large; }
+        .pl5-#{$bpLetter} { padding-left: $spacing-extra-large; }
+        .pl6-#{$bpLetter} { padding-left: $spacing-extra-extra-large; }
+        .pl7-#{$bpLetter} { padding-left: $spacing-extra-extra-extra-large; }
+
+        .pr0-#{$bpLetter} { padding-right: $spacing-none; }
+        .pr1-#{$bpLetter} { padding-right: $spacing-extra-small; }
+        .pr2-#{$bpLetter} { padding-right: $spacing-small; }
+        .pr3-#{$bpLetter} { padding-right: $spacing-medium; }
+        .pr4-#{$bpLetter} { padding-right: $spacing-large; }
+        .pr5-#{$bpLetter} { padding-right: $spacing-extra-large; }
+        .pr6-#{$bpLetter} { padding-right: $spacing-extra-extra-large; }
+        .pr7-#{$bpLetter} { padding-right: $spacing-extra-extra-extra-large; }
+
+        .pb0-#{$bpLetter} { padding-bottom: $spacing-none; }
+        .pb1-#{$bpLetter} { padding-bottom: $spacing-extra-small; }
+        .pb2-#{$bpLetter} { padding-bottom: $spacing-small; }
+        .pb3-#{$bpLetter} { padding-bottom: $spacing-medium; }
+        .pb4-#{$bpLetter} { padding-bottom: $spacing-large; }
+        .pb5-#{$bpLetter} { padding-bottom: $spacing-extra-large; }
+        .pb6-#{$bpLetter} { padding-bottom: $spacing-extra-extra-large; }
+        .pb7-#{$bpLetter} { padding-bottom: $spacing-extra-extra-extra-large; }
+
+        .pt0-#{$bpLetter} { padding-top: $spacing-none; }
+        .pt1-#{$bpLetter} { padding-top: $spacing-extra-small; }
+        .pt2-#{$bpLetter} { padding-top: $spacing-small; }
+        .pt3-#{$bpLetter} { padding-top: $spacing-medium; }
+        .pt4-#{$bpLetter} { padding-top: $spacing-large; }
+        .pt5-#{$bpLetter} { padding-top: $spacing-extra-large; }
+        .pt6-#{$bpLetter} { padding-top: $spacing-extra-extra-large; }
+        .pt7-#{$bpLetter} { padding-top: $spacing-extra-extra-extra-large; }
+
+        .pv0-#{$bpLetter} {
+          padding-top: $spacing-none;
+          padding-bottom: $spacing-none;
+        }
+        .pv1-#{$bpLetter} {
+          padding-top: $spacing-extra-small;
+          padding-bottom: $spacing-extra-small;
+        }
+        .pv2-#{$bpLetter} {
+          padding-top: $spacing-small;
+          padding-bottom: $spacing-small;
+        }
+        .pv3-#{$bpLetter} {
+          padding-top: $spacing-medium;
+          padding-bottom: $spacing-medium;
+        }
+        .pv4-#{$bpLetter} {
+          padding-top: $spacing-large;
+          padding-bottom: $spacing-large;
+        }
+        .pv5-#{$bpLetter} {
+          padding-top: $spacing-extra-large;
+          padding-bottom: $spacing-extra-large;
+        }
+        .pv6-#{$bpLetter} {
+          padding-top: $spacing-extra-extra-large;
+          padding-bottom: $spacing-extra-extra-large;
+        }
+        .pv7-#{$bpLetter} {
+          padding-top: $spacing-extra-extra-extra-large;
+          padding-bottom: $spacing-extra-extra-extra-large;
+        }
+
+        .ph0-#{$bpLetter} {
+          padding-left: $spacing-none;
+          padding-right: $spacing-none;
+        }
+        .ph1-#{$bpLetter} {
+          padding-left: $spacing-extra-small;
+          padding-right: $spacing-extra-small;
+        }
+        .ph2-#{$bpLetter} {
+          padding-left: $spacing-small;
+          padding-right: $spacing-small;
+        }
+        .ph3-#{$bpLetter} {
+          padding-left: $spacing-medium;
+          padding-right: $spacing-medium;
+        }
+        .ph4-#{$bpLetter} {
+          padding-left: $spacing-large;
+          padding-right: $spacing-large;
+        }
+        .ph5-#{$bpLetter} {
+          padding-left: $spacing-extra-large;
+          padding-right: $spacing-extra-large;
+        }
+        .ph6-#{$bpLetter} {
+          padding-left: $spacing-extra-extra-large;
+          padding-right: $spacing-extra-extra-large;
+        }
+        .ph7-#{$bpLetter} {
+          padding-left: $spacing-extra-extra-extra-large;
+          padding-right: $spacing-extra-extra-extra-large;
+        }
+
+        .ma0-#{$bpLetter}   {  margin: $spacing-none; }
+        .ma1-#{$bpLetter}   {  margin: $spacing-extra-small; }
+        .ma2-#{$bpLetter}   {  margin: $spacing-small; }
+        .ma3-#{$bpLetter}   {  margin: $spacing-medium; }
+        .ma4-#{$bpLetter}   {  margin: $spacing-large; }
+        .ma5-#{$bpLetter}   {  margin: $spacing-extra-large; }
+        .ma6-#{$bpLetter}   {  margin: $spacing-extra-extra-large; }
+        .ma7-#{$bpLetter}   { margin: $spacing-extra-extra-extra-large; }
+
+        .ml0-#{$bpLetter}   {  margin-left: $spacing-none; }
+        .ml1-#{$bpLetter}   {  margin-left: $spacing-extra-small; }
+        .ml2-#{$bpLetter}   {  margin-left: $spacing-small; }
+        .ml3-#{$bpLetter}   {  margin-left: $spacing-medium; }
+        .ml4-#{$bpLetter}   {  margin-left: $spacing-large; }
+        .ml5-#{$bpLetter}   {  margin-left: $spacing-extra-large; }
+        .ml6-#{$bpLetter}   {  margin-left: $spacing-extra-extra-large; }
+        .ml7-#{$bpLetter}   { margin-left: $spacing-extra-extra-extra-large; }
+
+        .mr0-#{$bpLetter}   {  margin-right: $spacing-none; }
+        .mr1-#{$bpLetter}   {  margin-right: $spacing-extra-small; }
+        .mr2-#{$bpLetter}   {  margin-right: $spacing-small; }
+        .mr3-#{$bpLetter}   {  margin-right: $spacing-medium; }
+        .mr4-#{$bpLetter}   {  margin-right: $spacing-large; }
+        .mr5-#{$bpLetter}   {  margin-right: $spacing-extra-large; }
+        .mr6-#{$bpLetter}   {  margin-right: $spacing-extra-extra-large; }
+        .mr7-#{$bpLetter}   { margin-right: $spacing-extra-extra-extra-large; }
+
+        .mb0-#{$bpLetter}   {  margin-bottom: $spacing-none; }
+        .mb1-#{$bpLetter}   {  margin-bottom: $spacing-extra-small; }
+        .mb2-#{$bpLetter}   {  margin-bottom: $spacing-small; }
+        .mb3-#{$bpLetter}   {  margin-bottom: $spacing-medium; }
+        .mb4-#{$bpLetter}   {  margin-bottom: $spacing-large; }
+        .mb5-#{$bpLetter}   {  margin-bottom: $spacing-extra-large; }
+        .mb6-#{$bpLetter}   {  margin-bottom: $spacing-extra-extra-large; }
+        .mb7-#{$bpLetter}   { margin-bottom: $spacing-extra-extra-extra-large; }
+
+        .mt0-#{$bpLetter}   {  margin-top: $spacing-none; }
+        .mt1-#{$bpLetter}   {  margin-top: $spacing-extra-small; }
+        .mt2-#{$bpLetter}   {  margin-top: $spacing-small; }
+        .mt3-#{$bpLetter}   {  margin-top: $spacing-medium; }
+        .mt4-#{$bpLetter}   {  margin-top: $spacing-large; }
+        .mt5-#{$bpLetter}   {  margin-top: $spacing-extra-large; }
+        .mt6-#{$bpLetter}   {  margin-top: $spacing-extra-extra-large; }
+        .mt7-#{$bpLetter}   { margin-top: $spacing-extra-extra-extra-large; }
+
+        .mv0-#{$bpLetter}   {
+          margin-top: $spacing-none;
+          margin-bottom: $spacing-none;
+        }
+        .mv1-#{$bpLetter}  {
+          margin-top: $spacing-extra-small;
+          margin-bottom: $spacing-extra-small;
+        }
+        .mv2-#{$bpLetter}   {
+          margin-top: $spacing-small;
+          margin-bottom: $spacing-small;
+        }
+        .mv3-#{$bpLetter}   {
+          margin-top: $spacing-medium;
+          margin-bottom: $spacing-medium;
+        }
+        .mv4-#{$bpLetter}   {
+          margin-top: $spacing-large;
+          margin-bottom: $spacing-large;
+        }
+        .mv5-#{$bpLetter}   {
+          margin-top: $spacing-extra-large;
+          margin-bottom: $spacing-extra-large;
+        }
+        .mv6-#{$bpLetter}  {
+          margin-top: $spacing-extra-extra-large;
+          margin-bottom: $spacing-extra-extra-large;
+        }
+        .mv7-#{$bpLetter}  {
+          margin-top: $spacing-extra-extra-extra-large;
+          margin-bottom: $spacing-extra-extra-extra-large;
+        }
+
+        .mh0-#{$bpLetter}   {
+          margin-left: $spacing-none;
+          margin-right: $spacing-none;
+        }
+        .mh1-#{$bpLetter}   {
+          margin-left: $spacing-extra-small;
+          margin-right: $spacing-extra-small;
+        }
+        .mh2-#{$bpLetter}   {
+          margin-left: $spacing-small;
+          margin-right: $spacing-small;
+        }
+        .mh3-#{$bpLetter}   {
+          margin-left: $spacing-medium;
+          margin-right: $spacing-medium;
+        }
+        .mh4-#{$bpLetter}   {
+          margin-left: $spacing-large;
+          margin-right: $spacing-large;
+        }
+        .mh5-#{$bpLetter}   {
+          margin-left: $spacing-extra-large;
+          margin-right: $spacing-extra-large;
+        }
+        .mh6-#{$bpLetter}  {
+          margin-left: $spacing-extra-extra-large;
+          margin-right: $spacing-extra-extra-large;
+        }
+        .mh7-#{$bpLetter}  {
+          margin-left: $spacing-extra-extra-extra-large;
+          margin-right: $spacing-extra-extra-extra-large;
+        }
+      }
+      // default, mobile styles
+      @else {
+        .pa0 { padding: $spacing-none; }
+        .pa1 { padding: $spacing-extra-small; }
+        .pa2 { padding: $spacing-small; }
+        .pa3 { padding: $spacing-medium; }
+        .pa4 { padding: $spacing-large; }
+        .pa5 { padding: $spacing-extra-large; }
+        .pa6 { padding: $spacing-extra-extra-large; }
+        .pa7 { padding: $spacing-extra-extra-extra-large; }
+
+        .pl0 { padding-left: $spacing-none; }
+        .pl1 { padding-left: $spacing-extra-small; }
+        .pl2 { padding-left: $spacing-small; }
+        .pl3 { padding-left: $spacing-medium; }
+        .pl4 { padding-left: $spacing-large; }
+        .pl5 { padding-left: $spacing-extra-large; }
+        .pl6 { padding-left: $spacing-extra-extra-large; }
+        .pl7 { padding-left: $spacing-extra-extra-extra-large; }
+
+        .pr0 { padding-right: $spacing-none; }
+        .pr1 { padding-right: $spacing-extra-small; }
+        .pr2 { padding-right: $spacing-small; }
+        .pr3 { padding-right: $spacing-medium; }
+        .pr4 { padding-right: $spacing-large; }
+        .pr5 { padding-right: $spacing-extra-large; }
+        .pr6 { padding-right: $spacing-extra-extra-large; }
+        .pr7 { padding-right: $spacing-extra-extra-extra-large; }
+
+        .pb0 { padding-bottom: $spacing-none; }
+        .pb1 { padding-bottom: $spacing-extra-small; }
+        .pb2 { padding-bottom: $spacing-small; }
+        .pb3 { padding-bottom: $spacing-medium; }
+        .pb4 { padding-bottom: $spacing-large; }
+        .pb5 { padding-bottom: $spacing-extra-large; }
+        .pb6 { padding-bottom: $spacing-extra-extra-large; }
+        .pb7 { padding-bottom: $spacing-extra-extra-extra-large; }
+
+        .pt0 { padding-top: $spacing-none; }
+        .pt1 { padding-top: $spacing-extra-small; }
+        .pt2 { padding-top: $spacing-small; }
+        .pt3 { padding-top: $spacing-medium; }
+        .pt4 { padding-top: $spacing-large; }
+        .pt5 { padding-top: $spacing-extra-large; }
+        .pt6 { padding-top: $spacing-extra-extra-large; }
+        .pt7 { padding-top: $spacing-extra-extra-extra-large; }
+
+        .pv0 {
+          padding-top: $spacing-none;
+          padding-bottom: $spacing-none;
+        }
+        .pv1 {
+          padding-top: $spacing-extra-small;
+          padding-bottom: $spacing-extra-small;
+        }
+        .pv2 {
+          padding-top: $spacing-small;
+          padding-bottom: $spacing-small;
+        }
+        .pv3 {
+          padding-top: $spacing-medium;
+          padding-bottom: $spacing-medium;
+        }
+        .pv4 {
+          padding-top: $spacing-large;
+          padding-bottom: $spacing-large;
+        }
+        .pv5 {
+          padding-top: $spacing-extra-large;
+          padding-bottom: $spacing-extra-large;
+        }
+        .pv6 {
+          padding-top: $spacing-extra-extra-large;
+          padding-bottom: $spacing-extra-extra-large;
+        }
+        .pv7 {
+          padding-top: $spacing-extra-extra-extra-large;
+          padding-bottom: $spacing-extra-extra-extra-large;
+        }
+
+        .ph0 {
+          padding-left: $spacing-none;
+          padding-right: $spacing-none;
+        }
+        .ph1 {
+          padding-left: $spacing-extra-small;
+          padding-right: $spacing-extra-small;
+        }
+        .ph2 {
+          padding-left: $spacing-small;
+          padding-right: $spacing-small;
+        }
+        .ph3 {
+          padding-left: $spacing-medium;
+          padding-right: $spacing-medium;
+        }
+        .ph4 {
+          padding-left: $spacing-large;
+          padding-right: $spacing-large;
+        }
+        .ph5 {
+          padding-left: $spacing-extra-large;
+          padding-right: $spacing-extra-large;
+        }
+        .ph6 {
+          padding-left: $spacing-extra-extra-large;
+          padding-right: $spacing-extra-extra-large;
+        }
+        .ph7 {
+          padding-left: $spacing-extra-extra-extra-large;
+          padding-right: $spacing-extra-extra-extra-large;
+        }
+
+        .ma0  {  margin: $spacing-none; }
+        .ma1 {  margin: $spacing-extra-small; }
+        .ma2  {  margin: $spacing-small; }
+        .ma3  {  margin: $spacing-medium; }
+        .ma4  {  margin: $spacing-large; }
+        .ma5  {  margin: $spacing-extra-large; }
+        .ma6 {  margin: $spacing-extra-extra-large; }
+        .ma7 { margin: $spacing-extra-extra-extra-large; }
+
+        .ml0  {  margin-left: $spacing-none; }
+        .ml1 {  margin-left: $spacing-extra-small; }
+        .ml2  {  margin-left: $spacing-small; }
+        .ml3  {  margin-left: $spacing-medium; }
+        .ml4  {  margin-left: $spacing-large; }
+        .ml5  {  margin-left: $spacing-extra-large; }
+        .ml6 {  margin-left: $spacing-extra-extra-large; }
+        .ml7 { margin-left: $spacing-extra-extra-extra-large; }
+
+        .mr0  {  margin-right: $spacing-none; }
+        .mr1 {  margin-right: $spacing-extra-small; }
+        .mr2  {  margin-right: $spacing-small; }
+        .mr3  {  margin-right: $spacing-medium; }
+        .mr4  {  margin-right: $spacing-large; }
+        .mr5  {  margin-right: $spacing-extra-large; }
+        .mr6 {  margin-right: $spacing-extra-extra-large; }
+        .mr7 { margin-right: $spacing-extra-extra-extra-large; }
+
+        .mb0  {  margin-bottom: $spacing-none; }
+        .mb1 {  margin-bottom: $spacing-extra-small; }
+        .mb2  {  margin-bottom: $spacing-small; }
+        .mb3  {  margin-bottom: $spacing-medium; }
+        .mb4  {  margin-bottom: $spacing-large; }
+        .mb5  {  margin-bottom: $spacing-extra-large; }
+        .mb6 {  margin-bottom: $spacing-extra-extra-large; }
+        .mb7 { margin-bottom: $spacing-extra-extra-extra-large; }
+
+        .mt0  {  margin-top: $spacing-none; }
+        .mt1 {  margin-top: $spacing-extra-small; }
+        .mt2  {  margin-top: $spacing-small; }
+        .mt3  {  margin-top: $spacing-medium; }
+        .mt4  {  margin-top: $spacing-large; }
+        .mt5  {  margin-top: $spacing-extra-large; }
+        .mt6 {  margin-top: $spacing-extra-extra-large; }
+        .mt7 { margin-top: $spacing-extra-extra-extra-large; }
+
+        .mv0   {
+          margin-top: $spacing-none;
+          margin-bottom: $spacing-none;
+        }
+        .mv1  {
+          margin-top: $spacing-extra-small;
+          margin-bottom: $spacing-extra-small;
+        }
+        .mv2   {
+          margin-top: $spacing-small;
+          margin-bottom: $spacing-small;
+        }
+        .mv3   {
+          margin-top: $spacing-medium;
+          margin-bottom: $spacing-medium;
+        }
+        .mv4   {
+          margin-top: $spacing-large;
+          margin-bottom: $spacing-large;
+        }
+        .mv5   {
+          margin-top: $spacing-extra-large;
+          margin-bottom: $spacing-extra-large;
+        }
+        .mv6  {
+          margin-top: $spacing-extra-extra-large;
+          margin-bottom: $spacing-extra-extra-large;
+        }
+        .mv7  {
+          margin-top: $spacing-extra-extra-extra-large;
+          margin-bottom: $spacing-extra-extra-extra-large;
+        }
+
+        .mh0   {
+          margin-left: $spacing-none;
+          margin-right: $spacing-none;
+        }
+        .mh1   {
+          margin-left: $spacing-extra-small;
+          margin-right: $spacing-extra-small;
+        }
+        .mh2   {
+          margin-left: $spacing-small;
+          margin-right: $spacing-small;
+        }
+        .mh3   {
+          margin-left: $spacing-medium;
+          margin-right: $spacing-medium;
+        }
+        .mh4   {
+          margin-left: $spacing-large;
+          margin-right: $spacing-large;
+        }
+        .mh5   {
+          margin-left: $spacing-extra-large;
+          margin-right: $spacing-extra-large;
+        }
+        .mh6  {
+          margin-left: $spacing-extra-extra-large;
+          margin-right: $spacing-extra-extra-large;
+        }
+        .mh7  {
+          margin-left: $spacing-extra-extra-extra-large;
+          margin-right: $spacing-extra-extra-extra-large;
+        }
+      }
+    }
+  }
+}

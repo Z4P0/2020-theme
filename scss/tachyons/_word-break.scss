@@ -1,0 +1,29 @@
+// WORD BREAK
+
+// Base:
+//   word = word-break
+
+
+
+@mixin word-break {
+  // for each breakpoint
+  @each $size in $breakpoint-classes {
+    // write a mediaquery
+    @include breakpoint($size) {
+      // mediaquery specific
+      @if $size != $-zf-zero-breakpoint {
+        $bpLetter: str-slice($size, 1, 1);
+
+        .word-normal-#{$bpLetter} { word-break: normal; }
+        .word-wrap-#{$bpLetter} { word-break: break-all; }
+        .word-nowrap-#{$bpLetter} { word-break: keep-all; }
+      }
+      // default, mobile styles
+      @else {
+        .word-normal { word-break: normal; }
+        .word-wrap { word-break: break-all; }
+        .word-nowrap { word-break: keep-all; }
+      }
+    }
+  }
+}
