@@ -26,14 +26,22 @@ $black         : #0A0A0A;
 // FOUNDATION
 // ==
 $global-font-size: 112.5%;
-$body-background: $white;
-$body-font-family: "Source Sans Variable", Arial, sans-serif;
-$global-weight-normal: normal;
 $global-lineheight: 1.618;
-$body-font-color: $tuatara;
+$light-gray: $snow;
+$medium-gray: $white-smoke;
+$dark-gray: $base;
+$body-background: $white;
+$body-font-color: $charcoal;
+$body-font-family: "Source Sans Variable", Arial, sans-serif;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-position: 1rem;
+$global-weight-normal: 400;
+$global-weight-bold: 700;
 $global-radius: 2px;
 $global-button-cursor: auto;
 
+$breakpoint-classes: (small medium large);
 $breakpoints: (
   small: 0,
   medium: 640px,
@@ -41,6 +49,37 @@ $breakpoints: (
   xlarge: 1200px,
   xxlarge: 1440px,
 );
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-bold;
+$header-font-style: normal;
+$header-color: $oil;
+$header-lineheight: 1.4;
+$header-margin-bottom: 0.5rem;
+$header-styles: (
+  small: (
+    'h1': ('font-size': 36),
+    'h2': ('font-size': 30),
+    'h3': ('font-size': 27),
+    'h4': ('font-size': 24),
+    'h5': ('font-size': 22.5),
+    'h6': ('font-size': 18),
+  ),
+  medium: (
+    // sizes from:
+    // https://type-scale.com/
+    'h1': ('font-size': 54.93),
+    'h2': ('font-size': 43.95),
+    'h3': ('font-size': 35.16),
+    'h4': ('font-size': 28.13),
+    'h5': ('font-size': 22.5),
+    'h6': ('font-size': 18),
+  ),
+);
+
+$lead-font-size: 125%;
+$lead-lineheight: 1.4;
+
 
 
 

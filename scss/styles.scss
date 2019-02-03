@@ -24,9 +24,9 @@
 @include flexbox;
 @include floats;
 // @include font-family;
-// @include font-style;
-// @include font-weight;
-// @include heights;
+@include font-style;
+@include font-weight;
+@include heights;
 @include layout-utilities;
 // @include line-height;
 // @include lists;
@@ -38,7 +38,7 @@
 @include skins;
 @include spacing;
 @include text-align;
-// @include text-transform;
+@include text-transform;
 @include type-scale;
 @include typography-classes;
 // @include vertical-align;
@@ -52,7 +52,6 @@
 
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1rem;
-  font-weight: 700;
   line-height: 1.15;
 }
 
@@ -70,11 +69,6 @@ h4 {font-size: 1.563em;}
 h5 {font-size: 1.25em;}
 
 
-p {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 
 .container {
   padding: 10vh 10vw;
@@ -91,12 +85,3 @@ p {
   vertical-align: middle;
   margin-bottom: 6px;
 }
-
-.feather {
-  margin-right: 1rem;
-}
-
-// ul {
-//   padding-left: 0;
-//   list-style-position: inside;
-// }

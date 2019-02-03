@@ -335,9 +335,9 @@ body {
   padding: 0;
   background: #FEFEFE;
   font-family: "Source Sans Variable", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.618;
-  color: #333333;
+  color: #404040;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -422,7 +422,7 @@ i {
 
 strong,
 b {
-  font-weight: bold;
+  font-weight: 700;
   line-height: inherit; }
 
 small {
@@ -437,8 +437,8 @@ h5, .h5,
 h6, .h6 {
   font-family: "Source Sans Variable", Arial, sans-serif;
   font-style: normal;
-  font-weight: normal;
-  color: inherit;
+  font-weight: 700;
+  color: #252525;
   text-rendering: optimizeLegibility; }
   h1 small, .h1 small,
   h2 small, .h2 small,
@@ -447,57 +447,57 @@ h6, .h6 {
   h5 small, .h5 small,
   h6 small, .h6 small {
     line-height: 0;
-    color: #cacaca; }
+    color: #C8C8C8; }
 
 h1, .h1 {
-  font-size: 1.33333rem;
+  font-size: 2rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h2, .h2 {
-  font-size: 1.11111rem;
+  font-size: 1.66667rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h3, .h3 {
-  font-size: 1.05556rem;
+  font-size: 1.5rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h4, .h4 {
-  font-size: 1rem;
+  font-size: 1.33333rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h5, .h5 {
-  font-size: 0.94444rem;
+  font-size: 1.25rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h6, .h6 {
-  font-size: 0.88889rem;
+  font-size: 1rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 @media print, screen and (min-width: 40em) {
   h1, .h1 {
-    font-size: 2.66667rem; }
+    font-size: 3.05167rem; }
   h2, .h2 {
-    font-size: 2.22222rem; }
+    font-size: 2.44167rem; }
   h3, .h3 {
-    font-size: 1.72222rem; }
+    font-size: 1.95333rem; }
   h4, .h4 {
-    font-size: 1.38889rem; }
+    font-size: 1.56278rem; }
   h5, .h5 {
-    font-size: 1.11111rem; }
+    font-size: 1.25rem; }
   h6, .h6 {
-    font-size: 0.88889rem; } }
+    font-size: 1rem; } }
 
 a {
   line-height: inherit;
@@ -518,7 +518,7 @@ hr {
   margin: 1.11111rem auto;
   border-top: 0;
   border-right: 0;
-  border-bottom: 1px solid #cacaca;
+  border-bottom: 1px solid #C8C8C8;
   border-left: 0; }
 
 ul,
@@ -562,7 +562,7 @@ dl {
   margin-bottom: 1rem; }
   dl dt {
     margin-bottom: 0.3rem;
-    font-weight: bold; }
+    font-weight: 700; }
 
 dd {
   margin-left: 0; }
@@ -586,7 +586,7 @@ cite {
   font-style: normal;
   font-variant: small-caps;
   letter-spacing: 0.05rem;
-  color: #333333; }
+  color: #848484; }
   cite:before {
     content: "— "; }
 
@@ -608,7 +608,7 @@ code {
   padding: 0.11111rem 0.27778rem 0.05556rem;
   background-color: #E3E3E3;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-weight: normal;
+  font-weight: 400;
   color: #0A0A0A; }
 
 kbd {
@@ -1082,6 +1082,232 @@ pre code {
   .fn-l {
     float: none; } }
 
+.i {
+  font-style: italic; }
+
+.fs-normal {
+  font-style: normal; }
+
+@media print, screen and (min-width: 40em) {
+  .im {
+    font-style: italic; }
+  .fs-normalm {
+    font-style: normal; } }
+
+@media print, screen and (min-width: 64em) {
+  .il {
+    font-style: italic; }
+  .fs-normall {
+    font-style: normal; } }
+
+.normal {
+  font-weight: normal; }
+
+.b {
+  font-weight: bold; }
+
+.fw1 {
+  font-weight: 100; }
+
+.fw2 {
+  font-weight: 200; }
+
+.fw3 {
+  font-weight: 300; }
+
+.fw4 {
+  font-weight: 400; }
+
+.fw5 {
+  font-weight: 500; }
+
+.fw6 {
+  font-weight: 600; }
+
+.fw7 {
+  font-weight: 700; }
+
+.fw8 {
+  font-weight: 800; }
+
+.fw9 {
+  font-weight: 900; }
+
+@media print, screen and (min-width: 40em) {
+  .normalm {
+    font-weight: normal; }
+  .bm {
+    font-weight: bold; }
+  .fw1m {
+    font-weight: 100; }
+  .fw2m {
+    font-weight: 200; }
+  .fw3m {
+    font-weight: 300; }
+  .fw4m {
+    font-weight: 400; }
+  .fw5m {
+    font-weight: 500; }
+  .fw6m {
+    font-weight: 600; }
+  .fw7m {
+    font-weight: 700; }
+  .fw8m {
+    font-weight: 800; }
+  .fw9m {
+    font-weight: 900; } }
+
+@media print, screen and (min-width: 64em) {
+  .normall {
+    font-weight: normal; }
+  .bl {
+    font-weight: bold; }
+  .fw1l {
+    font-weight: 100; }
+  .fw2l {
+    font-weight: 200; }
+  .fw3l {
+    font-weight: 300; }
+  .fw4l {
+    font-weight: 400; }
+  .fw5l {
+    font-weight: 500; }
+  .fw6l {
+    font-weight: 600; }
+  .fw7l {
+    font-weight: 700; }
+  .fw8l {
+    font-weight: 800; }
+  .fw9l {
+    font-weight: 900; } }
+
+/* Height Scale */
+.h1 {
+  height: 1rem; }
+
+.h2 {
+  height: 2rem; }
+
+.h3 {
+  height: 4rem; }
+
+.h4 {
+  height: 8rem; }
+
+.h5 {
+  height: 16rem; }
+
+/* Height Percentages - Based off of height of parent */
+.h-25 {
+  height: 25%; }
+
+.h-50 {
+  height: 50%; }
+
+.h-75 {
+  height: 75%; }
+
+.h-100 {
+  height: 100%; }
+
+.min-h-100 {
+  min-height: 100%; }
+
+/* Screen Height Percentage */
+.vh-25 {
+  height: 25vh; }
+
+.vh-50 {
+  height: 50vh; }
+
+.vh-75 {
+  height: 75vh; }
+
+.vh-100 {
+  height: 100vh; }
+
+.min-vh-100 {
+  min-height: 100vh; }
+
+/* String Properties */
+.h-auto {
+  height: auto; }
+
+.h-inherit {
+  height: inherit; }
+
+@media print, screen and (min-width: 40em) {
+  .h1-m {
+    height: 1rem; }
+  .h2-m {
+    height: 2rem; }
+  .h3-m {
+    height: 4rem; }
+  .h4-m {
+    height: 8rem; }
+  .h5-m {
+    height: 16rem; }
+  .h-25-m {
+    height: 25%; }
+  .h-50-m {
+    height: 50%; }
+  .h-75-m {
+    height: 75%; }
+  .h-100-m {
+    height: 100%; }
+  .min-h-100-m {
+    min-height: 100%; }
+  .vh-25-m {
+    height: 25vh; }
+  .vh-50-m {
+    height: 50vh; }
+  .vh-75-m {
+    height: 75vh; }
+  .vh-100-m {
+    height: 100vh; }
+  .min-vh-100-m {
+    min-height: 100vh; }
+  .h-auto-m {
+    height: auto; }
+  .h-inherit-m {
+    height: inherit; } }
+
+@media print, screen and (min-width: 64em) {
+  .h1-l {
+    height: 1rem; }
+  .h2-l {
+    height: 2rem; }
+  .h3-l {
+    height: 4rem; }
+  .h4-l {
+    height: 8rem; }
+  .h5-l {
+    height: 16rem; }
+  .h-25-l {
+    height: 25%; }
+  .h-50-l {
+    height: 50%; }
+  .h-75-l {
+    height: 75%; }
+  .h-100-l {
+    height: 100%; }
+  .min-h-100-l {
+    min-height: 100%; }
+  .vh-25-l {
+    height: 25vh; }
+  .vh-50-l {
+    height: 50vh; }
+  .vh-75-l {
+    height: 75vh; }
+  .vh-100-l {
+    height: 100vh; }
+  .min-vh-100-l {
+    min-height: 100vh; }
+  .h-auto-l {
+    height: auto; }
+  .h-inherit-l {
+    height: inherit; } }
+
 /* Equivalent to .overflow-y-scroll */
 .overflow-container {
   overflow-y: scroll; }
@@ -1260,7 +1486,7 @@ pre code {
   color: #181818; }
 
 .dark-gray {
-  color: #333333; }
+  color: #848484; }
 
 .mid-gray {
   color: #5B5B5B; }
@@ -1429,7 +1655,7 @@ pre code {
   background-color: #181818; }
 
 .bg-dark-gray {
-  background-color: #333333; }
+  background-color: #848484; }
 
 .bg-mid-gray {
   background-color: #5B5B5B; }
@@ -2452,6 +2678,38 @@ pre code {
   .tj-l {
     text-align: justify; } }
 
+.ttc {
+  text-transform: capitalize; }
+
+.ttl {
+  text-transform: lowercase; }
+
+.ttu {
+  text-transform: uppercase; }
+
+.ttn {
+  text-transform: none; }
+
+@media print, screen and (min-width: 40em) {
+  .ttc-m {
+    text-transform: capitalize; }
+  .ttl-m {
+    text-transform: lowercase; }
+  .ttu-m {
+    text-transform: uppercase; }
+  .ttn-m {
+    text-transform: none; } }
+
+@media print, screen and (min-width: 64em) {
+  .ttc-l {
+    text-transform: capitalize; }
+  .ttl-l {
+    text-transform: lowercase; }
+  .ttu-l {
+    text-transform: uppercase; }
+  .ttn-l {
+    text-transform: none; } }
+
 /*
          * For Hero/Marketing Titles
          *
@@ -2563,13 +2821,13 @@ pre code {
 .subheader {
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.4;
-  color: #333333; }
+  color: #848484; }
 
 .lead {
-  font-size: 140.625%;
-  line-height: 1.6; }
+  font-size: 125%;
+  line-height: 1.4; }
 
 .stat {
   font-size: 2.5rem;
@@ -2867,7 +3125,6 @@ pre code {
 
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1rem;
-  font-weight: 700;
   line-height: 1.15; }
 
 h1 {
@@ -2886,10 +3143,6 @@ h4 {
 h5 {
   font-size: 1.25em; }
 
-p {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem; }
-
 .container {
   padding: 10vh 10vw; }
 
@@ -2903,6 +3156,3 @@ p {
   fill: none;
   vertical-align: middle;
   margin-bottom: 6px; }
-
-.feather {
-  margin-right: 1rem; }
