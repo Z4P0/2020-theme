@@ -1,3 +1,9 @@
+// TYPOGRAPHY
+$roboto-mono:   'Roboto Mono', 'Courier', monospace;
+$roboto:        'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+
+
 // COLORS
 // ==
 // Greyscale [3]
@@ -23,19 +29,53 @@ $jet           : #181818;
 $black         : #0A0A0A;
 
 
+$red: #b92d19;
+$red-900: #871505;
+$red-700: #A0200E;
+$red-500: #B92D19;
+$red-300: #D33923;
+$red-100: #ED472F;
+
+// Mexico R+G
+$red: #ce1126;
+$green: #006847;
+// Spurs blue
+$blue: #132257;
+$blue-900: #132257;
+$blue-800: #1A2B6A;
+$blue-700: #21367E;
+$blue-600: #2A4091;
+$blue-500: #334CA5;
+$blue-400: #3D58B8;
+$blue-300: #4865CB;
+$blue-200: #5473DF;
+$blue-100: #6181F2;
+
+
+
+
+
 // FOUNDATION
 // ==
-$global-font-size: 112.5%;
-$global-lineheight: 1.618;
-$light-gray: $snow;
-$medium-gray: $white-smoke;
-$dark-gray: $base;
-$body-background: $white;
-$body-font-color: $charcoal;
-$body-font-family: "Source Sans Variable", Arial, sans-serif;
-$global-margin: 1rem;
-$global-padding: 1rem;
-$global-position: 1rem;
+$global-font-size:    93.75%;
+$global-lineheight:   1.618;
+$foundation-palette: (
+  primary: #1779ba,
+  secondary: #767676,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+);
+
+$light-gray:          $snow;
+$medium-gray:         $white-smoke;
+$dark-gray:           $base;
+$body-background:     $jet;  // like from Cowboy Bebop
+$body-font-color:     $snow;
+$body-font-family:    $roboto-mono;
+$global-margin:       1.5rem;
+$global-padding:      1.5rem;
+$global-position:     1.5rem;
 $global-weight-normal: 400;
 $global-weight-bold: 700;
 $global-radius: 2px;
@@ -50,12 +90,12 @@ $breakpoints: (
   xxlarge: 1440px,
 );
 
-$header-font-family: $body-font-family;
-$header-font-weight: $global-weight-bold;
-$header-font-style: normal;
-$header-color: $oil;
-$header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-font-family:            $roboto;
+$header-font-weight:            $global-weight-bold;
+$header-font-style:             normal;
+$header-color:                  $ghost;
+$header-lineheight:             1.4;
+$header-margin-bottom:          0.5rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 36),
@@ -76,9 +116,20 @@ $header-styles: (
     'h6': ('font-size': 18),
   ),
 );
+$header-text-rendering:         optimizeLegibility;
+$small-font-size:               80%;
+$header-small-font-color:       $medium-gray;
+$paragraph-lineheight:          2;
+$paragraph-margin-bottom:       $global-margin;
+$paragraph-text-rendering:      optimizeLegibility;
+$anchor-color:                  $blue-100;
+$anchor-color-hover:            $blue-200;
+$anchor-text-decoration:        none;
+$anchor-text-decoration-hover:  none;
+$abbr-underline:                1px dotted $silver;
 
-$lead-font-size: 125%;
-$lead-lineheight: 1.4;
+$lead-font-size:                125%;
+$lead-lineheight:               1.4;
 
 
 
@@ -86,9 +137,9 @@ $lead-lineheight: 1.4;
 // TACHYONS
 // ==
 // Converted Variables
-$sans-serif:  $body-font-family !default;
-$serif:       Georgia, 'Times New Roman', serif !default;
-$code:        consolas, monaco, monospace !default;
+$sans-serif:              $roboto !default;
+$serif:                   $roboto-mono !default;
+$code:                    $roboto-mono, consolas, monaco, monospace !default;
 $font-size-headline:      6rem !default;
 $font-size-subheadline:   5rem !default;
 $font-size-1:             3rem !default;

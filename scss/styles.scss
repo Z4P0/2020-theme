@@ -6,7 +6,7 @@
 // @include base-styles;
 // --
 @include normalize;
-@include font-faces;
+// @include font-faces;
 @include global-styles;
 @include typography;
 // @include forms;
@@ -17,19 +17,19 @@
 // --
 // @include background-position;
 // @include background-size;
-// @include borders;
+@include borders;
 // @include clears;
 // @include coordinates;
 @include display;
 @include flexbox;
 @include floats;
-// @include font-family;
+@include font-family;
 @include font-style;
 @include font-weight;
 @include heights;
 @include layout-utilities;
 // @include line-height;
-// @include lists;
+@include lists;
 @include max-widths;
 // @include negative-margins;
 // @include overflow;
@@ -70,10 +70,6 @@ h5 {font-size: 1.25em;}
 
 
 
-.container {
-  padding: 10vh 10vw;
-}
-
 .feather {
   width: 20px;
   height: 20px;
@@ -84,4 +80,19 @@ h5 {font-size: 1.25em;}
   fill: none;
   vertical-align: middle;
   margin-bottom: 6px;
+}
+
+.i-sm {
+  width: 14px;
+  height: 14px;
+}
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+}
+.container {
+  padding: 10vh 10vw;
+  margin: auto;
 }
