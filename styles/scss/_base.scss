@@ -1,0 +1,43 @@
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scrollbar-color: #777 #222;
+  scrollbar-width: thin;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: #ebebeb;
+  color: #363636;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.616;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl {
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+h1 {
+  font-size: rem-calc(25);
+  line-height: 1.28;
+  margin-bottom: rem-calc(8);
+}
+
+// a {
+//   color: #6181f2;
+// }
+
