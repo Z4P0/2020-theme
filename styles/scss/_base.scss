@@ -15,11 +15,17 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #ebebeb;
   color: #363636;
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 100%;
+  // letter-spacing: -.56px;
+  letter-spacing: -0.035em;
   line-height: 1.616;
   margin: 0;
   padding: 0;
+  &.font-loaded {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    letter-spacing: 0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6,
