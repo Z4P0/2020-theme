@@ -1,57 +1,8 @@
-// // TYPOGRAPHY
-// $roboto-mono:   'Roboto Mono', 'Courier', monospace;
-// $roboto:        'Roboto', 'Helvetica Neue', Arial, sans-serif;
+@import "colors";
 
-
-
-// // COLORS
-// // ==
-// // Greyscale [3]
-// // Names are from Foudnation v5, hex values have been updated with https://palettte.app/
-// $white         : #FEFEFE;
-// $ghost         : #F0F0F0;
-// $snow          : #E3E3E3;
-// $vapor         : #D5D5D5;
-// $white-smoke   : #C8C8C8;
-// $silver        : #BABABA;
-// $smoke         : #ADADAD;
-// $gainsboro     : #9F9F9F;
-// $iron          : #929292;
-// $base          : #848484;
-// $aluminum      : #767676;
-// $jumbo         : #696969;
-// $monsoon       : #5B5B5B;
-// $steel         : #4E4E4E;
-// $charcoal      : #404040;
-// $tuatara       : #333333;
-// $oil           : #252525;
-// $jet           : #181818;
-// $black         : #0A0A0A;
-
-
-$red: #b92d19;
-$red-900: #871505;
-$red-700: #A0200E;
-$red-500: #B92D19;
-$red-300: #D33923;
-$red-100: #ED472F;
-
-// Mexico R+G
-$red: #ce1126;
-$green: #006847;
-// Spurs blue
-$blue: #132257;
-$blue-900: #132257;
-$blue-800: #1A2B6A;
-$blue-700: #21367E;
-$blue-600: #2A4091;
-$blue-500: #334CA5;
-$blue-400: #3D58B8;
-$blue-300: #4865CB;
-$blue-200: #5473DF;
-$blue-100: #6181F2;
-
-
+// line-height * font-size
+// 1.616 * 18 = 29px
+$unit: 29px;
 
 
 
