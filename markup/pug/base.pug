@@ -1,0 +1,38 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    block title
+      title Luis Rosario
+    meta(name="description", content="description")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap")
+    link(rel="preload", href="../../styles/css/styles.css", as="style")
+    link(rel="stylesheet", href="../../styles/css/styles.css")
+
+  body
+
+    a(href="#main").show-for-sr Skip to main content
+
+    .container
+      block container
+        main#main
+          block main
+            header
+              h1 Page title
+            div
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eum facilis voluptates molestias, ipsa odit iure animi libero nobis dolores voluptatum autem officia illo repellat sequi dicta nesciunt consectetur, doloribus!
+
+        footer
+          ul
+            li
+              a(href="#") About
+            li
+              a(href="#") Workshop
+          p
+            small &copy; 2020
+
+    block scripts
+      //- script(src="../../scripts/hero-header.js")
+    script(src="../../scripts/domcontentloaded.js")
