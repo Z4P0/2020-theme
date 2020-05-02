@@ -1,22 +1,23 @@
 @import "util/unit";
 
-html {
-  box-sizing: border-box;
-  scrollbar-color: #777 #222;
-  scrollbar-width: thin;
-}
-
 *,
 *:after,
 *:before {
   box-sizing: inherit;
 }
 
+html {
+  box-sizing: border-box;
+  scrollbar-color: #777 #222;
+  scrollbar-width: thin;
+}
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  background-color: #ebebeb;
   color: #363636;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", Arial, sans-serif;
   font-size: 100%;
   line-height: 1.616;
   margin: 0;
@@ -62,6 +63,12 @@ header {
     list-style: none;
     margin: 0;
     padding-left: 0;
+    &:before {
+      content: "[";
+    }
+    &:after {
+      content: "]";
+    }
   }
   li {
     display: inline-block;
@@ -75,10 +82,10 @@ header {
   abbr {
     text-decoration: none;
     &:before {
-      content: "['";
+      content: "'";
     }
     &:after {
-      content: "']";
+      content: "'";
     }
   }
 }
