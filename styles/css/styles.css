@@ -23,9 +23,6 @@ h1, h2, h3, h4, h5, h6,
 p, ul, ol, dl {
   margin-top: 0; }
 
-p, ul, ol, dl {
-  line-height: 1.5; }
-
 ul {
   padding-left: 0; }
 
@@ -33,6 +30,34 @@ h1 {
   font-size: 1.5625rem;
   line-height: 1.28;
   margin-bottom: 0.5rem; }
+
+.show-for-sr,
+.show-on-focus {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
+
+.show-on-focus:active, .show-on-focus:focus {
+  position: static !important;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal; }
+
+main article {
+  padding: 29px; }
+  main article p {
+    max-width: 35.4em; }
+  @media print, screen and (min-width: 40em) {
+    main article {
+      font-size: 1.125rem;
+      padding: 58px; } }
 
 header {
   background-color: #181818;
@@ -64,43 +89,8 @@ header {
     header abbr:after {
       content: "'"; }
 
-article {
-  padding: 3rem 20vw 0; }
-
 footer {
   padding: 1rem; }
   footer p {
     margin-bottom: 0;
     text-align: right; }
-
-#main p {
-  margin-bottom: 1.5em; }
-
-#main ul {
-  list-style: none; }
-  #main ul:last-of-type {
-    margin-bottom: 0; }
-
-#main li {
-  display: inline-block; }
-  #main li + li {
-    margin-left: 1.5rem; }
-
-.show-for-sr,
-.show-on-focus {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0; }
-
-.show-on-focus:active, .show-on-focus:focus {
-  position: static !important;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  clip: auto;
-  white-space: normal; }

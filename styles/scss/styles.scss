@@ -1,5 +1,7 @@
-@import "util/unit";
+@import "util/util";
 
+// Base
+// ==================================================
 *,
 *:after,
 *:before {
@@ -29,10 +31,6 @@ p, ul, ol, dl {
   margin-top: 0;
 }
 
-p, ul, ol, dl {
-  line-height: 1.5;
-}
-
 ul {
   padding-left: 0;
 }
@@ -46,6 +44,61 @@ h1 {
 // a {
 //   color: #6181f2;
 // }
+
+
+
+// Layout
+// ==================================================
+// article {
+//   padding: 3rem 10vw 0;
+//   @include breakpoint(large) {
+//     padding: 3rem 20vw 0;
+//   }
+// }
+
+
+
+// Components
+// ==================================================
+.show-for-sr,
+.show-on-focus {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+.show-on-focus {
+  &:active,
+  &:focus {
+    position: static !important;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+
+
+
+
+// Theme
+// ==================================================
+main article {
+  padding: 29px;
+  p {
+    max-width: 35.4em;
+  }
+  @include breakpoint(medium) {
+    font-size: rem-calc(18);
+    padding: 29px*2;
+  }
+}
 
 header {
   background-color: #181818;
@@ -90,9 +143,6 @@ header {
   }
 }
 
-article {
-  padding: 3rem 20vw 0;
-}
 
 footer {
   padding: 1rem;
@@ -103,42 +153,16 @@ footer {
 }
 
 #main {
-  p {
-    margin-bottom: 1.5em;
-  }
-  ul {
-    list-style: none;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-  li {
-    display: inline-block;
-    + li {
-      margin-left: 1.5rem;
-    }
-  }
-}
-
-.show-for-sr,
-.show-on-focus {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border: 0;
-}
-.show-on-focus {
-  &:active,
-  &:focus {
-    position: static !important;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
+  // ul {
+  //   list-style: none;
+  //   &:last-of-type {
+  //     margin-bottom: 0;
+  //   }
+  // }
+  // li {
+  //   display: inline-block;
+  //   + li {
+  //     margin-left: 1.5rem;
+  //   }
+  // }
 }
