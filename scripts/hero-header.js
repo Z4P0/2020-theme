@@ -13,4 +13,6 @@ header.style.backgroundColor = `hsla(${hue}, 65%, 50%, .8)`;
 /*
   background-image supports linear-gradients
 */
-header.style.backgroundImage = `linear-gradient(hsla(${hue}, 85%, 60%, .8), hsla(${hue}, 95%, 40%, .8))`;
+// header.style.backgroundImage = `linear-gradient(hsla(${hue}, 85%, 60%, .8), hsla(${hue}, 95%, 40%, .8))`;
+// header.style.backgroundImage = `linear-gradient(45deg, hsla(${hue}, 85%, 60%, .8), hsla(${hue}, 95%, 40%, .8))`;
+// header.style.backgroundImage = `linear-gradient(135deg, hsla(${hue}, 85%, 60%, .8), hsla(${hue}, 95%, 40%, .8))`;
