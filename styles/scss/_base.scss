@@ -28,22 +28,81 @@ body {
   }
 }
 
+// Typography styles
+// ----------------------------------------
 h1, h2, h3, h4, h5, h6,
 p, ul, ol, dl {
   margin-top: 0;
 }
 
-ul {
-  padding-left: 0;
+h1 {
+  font-size: rem-calc(32);
+  line-height: 1.21875;
 }
 
-h1 {
-  font-size: rem-calc(25);
-  line-height: 1.28;
-  margin-bottom: rem-calc(8);
+h2 {
+  font-size: rem-calc(26);
+  line-height: 1.1538;
+}
+
+h3 {
+  font-size: rem-calc(22);
+  line-height: 1.318181;
+}
+
+h4 {
+  font-size: rem-calc(21);
+  line-height: 1.28571;
+}
+
+h5 {
+  font-size: rem-calc(20);
+  line-height: 1.25;
+}
+
+h6 {
+  font-size: rem-calc(19);
+  line-height: 1.26315;
+}
+
+p, ul, ol, dl {
+  font-size: rem-calc(18);
+}
+
+ul, ol {
+  padding-left: 0;
 }
 
 // a {
 //   color: #6181f2;
 // }
 
+@include breakpoint(large) {
+  h1 {
+    font-size: rem-calc(56);
+    line-height: 1.05357;
+  }
+  h2 {
+    font-size: rem-calc(42);
+    line-height: 1.023809;
+  }
+  h3 {
+    font-size: rem-calc(34);
+    line-height: 1.23529;
+  }
+  h4 {
+    font-size: rem-calc(30);
+    line-height: 1.2667;
+  }
+  h5 {
+    font-size: rem-calc(26);
+    line-height: 1.2692;
+  }
+  h6 {
+    font-size: rem-calc(22);
+    line-height: 1.2727;
+  }
+  p, ul, ol, dl {
+    font-size: rem-calc(20);
+  }
+}
