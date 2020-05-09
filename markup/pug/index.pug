@@ -1,28 +1,37 @@
 extends base.pug
 
-block main
-  header#hero-header
-    h1 Luis Rosario
-    p Web Developer
+block container
+  header
+    h1.show-for-sr Luis Rosario
+  nav.site-nav
     ul
       li
-        abbr(title="Hyper-Text Markup Language") HTML
+        a(href="#") About
       li
-        abbr(title="Cascading Style Sheets") CSS
-      li
-        abbr(title="JavaScript") JS
-      li
-        abbr(title="User Interface") UI
-      li
-        abbr(title="User Experience") UX
+        a(href="#") Workshop
+  main#main
+    header#hero-header
+      h1 Luis Rosario
+      p Web Developer
+      ul
+        li
+          abbr(title="Hyper-Text Markup Language") HTML
+        li
+          abbr(title="Cascading Style Sheets") CSS
+        li
+          abbr(title="JavaScript") JS
+        li
+          abbr(title="User Interface") UI
+        li
+          abbr(title="User Experience") UX
 
-  .content
-    p Born in Mexico, raised in New York State. I help make sure websites at the University of Rochester are accessible, performant, and beautiful.
+    .content
+      p Born in Mexico, raised in New York State. I help make sure websites at the University of Rochester are accessible, performant, and beautiful.
 
-    ul
-      li
-        a(href="https://github.com/Z4P0/") Github
-      li
-        a(href="https://open.spotify.com/user/leftsumo") Spotify
-      li
-        a(href="https://www.last.fm/user/space_monk-e") Last.fm
+      ul
+        li
+          a(href="https://github.com/Z4P0/") Github
+        li
+          a(href="https://open.spotify.com/user/leftsumo") Spotify
+        li
+          a(href="https://www.last.fm/user/space_monk-e") Last.fm

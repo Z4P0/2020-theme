@@ -1,5 +1,4 @@
-
-header {
+#hero-header {
   background-color: #181818;
   color: #e3e3e3;
   min-height: 98.5vh;
@@ -42,7 +41,6 @@ header {
   }
 }
 
-
 footer {
   padding: 1rem;
   p {
@@ -63,4 +61,8 @@ footer {
     padding: $unit*2;
   }
 
+}
+
+.site-nav {
+  display: flex;
 }

@@ -1,6 +1,6 @@
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   box-sizing: inherit; }
 
 html {
@@ -54,34 +54,34 @@ h1 {
   clip: auto;
   white-space: normal; }
 
-header {
+#hero-header {
   background-color: #181818;
   color: #e3e3e3;
   min-height: 98.5vh;
   padding: 42vh 20vw 20vh; }
-  header p {
+  #hero-header p {
     font-size: 1.25rem;
     line-height: 1.25;
     margin-bottom: 0.625rem; }
-  header ul {
+  #hero-header ul {
     font-family: "Source Code Pro", monospace;
     font-size: 0.9375rem;
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    header ul:before {
+    #hero-header ul:before {
       content: "["; }
-    header ul:after {
+    #hero-header ul:after {
       content: "]"; }
-  header li {
+  #hero-header li {
     display: inline-block; }
-    header li:not(:last-of-type):after {
+    #hero-header li:not(:last-of-type):after {
       content: ","; }
-  header abbr {
+  #hero-header abbr {
     text-decoration: none; }
-    header abbr:before {
+    #hero-header abbr:before {
       content: "'"; }
-    header abbr:after {
+    #hero-header abbr:after {
       content: "'"; }
 
 footer {
@@ -100,3 +100,6 @@ footer {
     .content {
       font-size: 1.125rem;
       padding: 58px; } }
+
+.site-nav {
+  display: flex; }
