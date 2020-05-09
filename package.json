@@ -14,7 +14,7 @@
     "postcss": "postcss styles/css/styles.css --no-map --use autoprefixer --use css-mqpacker --use cssnano --output styles/css/styles.min.css",
     "css:watch": "node-sass --watch --source-map true --output styles/css styles/scss",
     "regular-server": "http-server --silent -o",
-    "live-reload": "live-server --quiet --port=4040 --watch=markup/*.html,styles/css",
+    "live-reload": "live-server --quiet --port=4040 --watch=markup/html,styles/css",
     "servers": "npm run live-reload & npm run regular-server",
     "watch": "npm run html:watch & npm run css:watch",
     "build": "npm run html && npm run css",
