@@ -54,15 +54,6 @@ h1 {
   clip: auto;
   white-space: normal; }
 
-main article {
-  padding: 29px; }
-  main article p {
-    max-width: 35.4em; }
-  @media print, screen and (min-width: 40em) {
-    main article {
-      font-size: 1.125rem;
-      padding: 58px; } }
-
 header {
   background-color: #181818;
   color: #e3e3e3;
@@ -98,3 +89,14 @@ footer {
   footer p {
     margin-bottom: 0;
     text-align: right; }
+
+.content {
+  padding: 29px; }
+  .content p, .content ul, .content ol {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 35.4em; }
+  @media print, screen and (min-width: 40em) {
+    .content {
+      font-size: 1.125rem;
+      padding: 58px; } }
