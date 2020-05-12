@@ -97,13 +97,14 @@ footer {
   padding: 1rem; }
   footer p {
     margin-bottom: 0;
-    text-align: right; }
+    text-align: right;
+    opacity: 0.5; }
 
 #hero-header {
   background-color: #181818;
   color: #e3e3e3;
   min-height: 98.5vh;
-  padding: 42vh 3em 20vh; }
+  padding: 42vh 3rem 20vh; }
   #hero-header p:first-of-type {
     font-size: 1.625rem;
     line-height: 1.1538;
@@ -132,14 +133,27 @@ footer {
       content: "'"; }
     #hero-header abbr::after {
       content: "'"; }
+  @media print, screen and (min-width: 35.5em) {
+    #hero-header {
+      padding-left: 15vw;
+      padding-right: 15vw; } }
+  @media print, screen and (min-width: 40em) {
+    #hero-header {
+      padding-left: 20vw;
+      padding-right: 20vw; } }
 
 .content {
-  padding: 2em 3em; }
+  padding: 4em 3em; }
   .content p, .content ul, .content ol {
     max-width: 35.4em; }
+  @media print, screen and (min-width: 35.5em) {
+    .content {
+      padding-left: 15vw;
+      padding-right: 15vw; } }
   @media print, screen and (min-width: 40em) {
     .content {
-      padding: 58px; } }
+      padding-left: 20vw;
+      padding-right: 20vw; } }
 
 .site-nav {
   color: #e3e3e3;
