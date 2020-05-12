@@ -28,8 +28,10 @@ body {
   }
 }
 
+
+
 // Typography styles
-// ----------------------------------------
+// ==================================================
 h1, h2, h3, h4, h5, h6,
 p, ul, ol, dl {
   margin-top: 0;
@@ -73,10 +75,6 @@ ul, ol {
   padding-left: 0;
 }
 
-// a {
-//   color: #6181f2;
-// }
-
 @include breakpoint(large) {
   h1 {
     font-size: rem-calc(56);
@@ -105,4 +103,12 @@ ul, ol {
   p, ul, ol, dl {
     font-size: rem-calc(20);
   }
+}
+
+
+
+
+a {
+  transition-delay: 50ms;
+  // color: #6181f2;
 }

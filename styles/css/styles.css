@@ -79,6 +79,9 @@ ul, ol {
   p, ul, ol, dl {
     font-size: 1.25rem; } }
 
+a {
+  transition-delay: 50ms; }
+
 .show-for-sr {
   /* https://webaim.org/techniques/css/invisiblecontent/ */
   clip: rect(1px, 1px, 1px, 1px);
@@ -90,18 +93,28 @@ ul, ol {
   padding: 0;
   position: absolute; }
 
+footer {
+  padding: 1rem; }
+  footer p {
+    margin-bottom: 0;
+    text-align: right; }
+
 #hero-header {
   background-color: #181818;
   color: #e3e3e3;
   min-height: 98.5vh;
-  padding: 42vh 20vw 20vh; }
-  #hero-header p {
+  padding: 42vh 3em 20vh; }
+  #hero-header p:first-of-type {
+    font-size: 1.625rem;
+    line-height: 1.1538;
+    margin-bottom: 0.25em; }
+  #hero-header p + p {
     font-size: 1.25rem;
     line-height: 1.25;
     margin-bottom: 0.625rem; }
   #hero-header ul {
     font-family: "Source Code Pro", monospace;
-    font-size: 0.9375rem;
+    font-size: 0.9375em;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -120,14 +133,8 @@ ul, ol {
     #hero-header abbr::after {
       content: "'"; }
 
-footer {
-  padding: 1rem; }
-  footer p {
-    margin-bottom: 0;
-    text-align: right; }
-
 .content {
-  padding: 29px; }
+  padding: 2em 3em; }
   .content p, .content ul, .content ol {
     max-width: 35.4em; }
   @media print, screen and (min-width: 40em) {
@@ -135,4 +142,32 @@ footer {
       padding: 58px; } }
 
 .site-nav {
-  display: flex; }
+  color: #e3e3e3;
+  position: relative; }
+
+.site-nav-list {
+  display: flex;
+  font-size: 1rem;
+  justify-content: flex-end;
+  line-height: 1.6111;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 0.5em 1em;
+  position: absolute;
+  right: 0; }
+  .site-nav-list li + li {
+    margin-left: .5em; }
+  .site-nav-list a {
+    color: inherit;
+    display: inline-block;
+    opacity: 0.8;
+    padding: .875em .5em;
+    text-decoration: none;
+    transition: opacity .125s ease-out; }
+    .site-nav-list a:hover {
+      opacity: 1;
+      text-decoration: underline;
+      text-decoration-thickness: 2px; }
+  @media print, screen and (min-width: 64em) {
+    .site-nav-list {
+      font-size: 1.125rem; } }
