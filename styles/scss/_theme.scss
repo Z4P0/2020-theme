@@ -18,14 +18,17 @@ footer {
   color: #e3e3e3;
   min-height: 98.5vh;
   padding: 42vh 3rem 20vh;
+  font-size: rem-calc(26);
   p {
     &:first-of-type {
-      font-size: rem-calc(26);
+      // font-size: rem-calc(26);
+      font-size: inherit;
       line-height: 1.1538;
       margin-bottom: 0.25em;
     }
     + p {
-      font-size: rem-calc(20);
+      // font-size: rem-calc(20);
+      font-size: 0.7692em;
       line-height: 1.25;
       margin-bottom: rem-calc(10);
     }
@@ -33,7 +36,8 @@ footer {
   ul {
     font-family: "Source Code Pro", monospace;
     // font-size: rem-calc(15);
-    font-size: 0.9375em;
+    // font-size: 0.9375em;
+    font-size: 0.5769em;
     list-style: none;
     margin: 0;
     padding-left: 0;
@@ -68,8 +72,14 @@ footer {
     padding-right: 15vw;
   }
   @include breakpoint(medium) {
+    font-size: rem-calc(30);
     padding-left: 20vw;
     padding-right: 20vw;
+  }
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(34);
+    padding-left: 25vw;
+    padding-right: 25vw;
   }
 }
 
@@ -86,7 +96,10 @@ footer {
     padding-left: 20vw;
     padding-right: 20vw;
   }
-
+  @include breakpoint(xlarge) {
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
 }
 
 // Site nav
