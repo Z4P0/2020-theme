@@ -161,9 +161,9 @@ a {
       padding-left: 25vw;
       padding-right: 25vw; } }
 
-footer {
+.site-footer {
   padding: 1rem; }
-  footer p {
+  .site-footer p {
     margin-bottom: 0;
     text-align: right;
     opacity: 0.5; }
