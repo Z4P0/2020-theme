@@ -1,4 +1,4 @@
-.show-for-sr {
+@mixin show-for-sr {
   /* https://webaim.org/techniques/css/invisiblecontent/ */
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -9,6 +9,10 @@
   padding: 0;
   position: absolute;
 }
+.show-for-sr {
+  @include show-for-sr;
+}
+
 // // .show-for-sr,
 // .show-on-focus {
 //   position: absolute !important;

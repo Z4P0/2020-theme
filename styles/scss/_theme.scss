@@ -13,6 +13,23 @@ footer {
 
 // Landing page
 // ==================================================
+
+.frontpage {
+  .site-header {
+    padding: 0;
+    h1 {
+      @include show-for-sr;
+    }
+  }
+  .site-nav {
+    color: #e3e3e3;
+    padding: .5rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
 #hero-header {
   background-color: #181818;
   color: #e3e3e3;
@@ -117,6 +134,9 @@ footer {
     line-height: 1.26315;
     margin-bottom: 0;
   }
+  .site-nav {
+    margin-left: auto;
+  }
 }
 
 h1 a {
@@ -136,7 +156,7 @@ h1 a {
 // ==================================================
 // .site-nav {
 //   // color: #ebebeb;
-//   // color: #e3e3e3;
+//   color: #e3e3e3;
 //   // position: relative;
 // }
 
