@@ -140,12 +140,11 @@ footer {
       padding-right: 15vw; } }
   @media print, screen and (min-width: 40em) {
     #hero-header {
-      font-size: 1.875rem;
       padding-left: 20vw;
       padding-right: 20vw; } }
   @media screen and (min-width: 75em) {
     #hero-header {
-      font-size: 2.125rem;
+      font-size: 1.875rem;
       padding-left: 25vw;
       padding-right: 25vw; } }
 
