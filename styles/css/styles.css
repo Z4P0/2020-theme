@@ -168,19 +168,24 @@ footer {
       padding-left: 25vw;
       padding-right: 25vw; } }
 
+main p, main ul, main ol {
+  max-width: 35.4em; }
+
+main > header,
 .content {
   padding: 4em 3em; }
-  .content p, .content ul, .content ol {
-    max-width: 35.4em; }
   @media print, screen and (min-width: 35.5em) {
+    main > header,
     .content {
       padding-left: 15vw;
       padding-right: 15vw; } }
   @media print, screen and (min-width: 40em) {
+    main > header,
     .content {
       padding-left: 20vw;
       padding-right: 20vw; } }
   @media screen and (min-width: 75em) {
+    main > header,
     .content {
       padding-left: 25vw;
       padding-right: 25vw; } }

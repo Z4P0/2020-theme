@@ -100,11 +100,15 @@ footer {
   }
 }
 
-.content {
-  padding: 4em 3em;
+main {
   p, ul, ol {
     max-width: 35.4em;
   }
+}
+
+main > header,
+.content {
+  padding: 4em 3em;
   @include breakpoint(small-landscape) {
     padding-left: 15vw;
     padding-right: 15vw;
