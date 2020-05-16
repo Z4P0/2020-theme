@@ -1,16 +1,7 @@
+@import "site-header";
+@import "site-nav";
+@import "site-footer";
 @import "frontpage";
-
-// Layout
-// ==================================================
-.site-footer {
-  padding: 1rem;
-  p {
-    margin-bottom: 0;
-    text-align: right;
-    opacity: 0.5;
-  }
-}
-
 
 main {
   p, ul, ol {
@@ -32,76 +23,5 @@ main > header,
   @include breakpoint(xlarge) {
     padding-left: 25vw;
     padding-right: 25vw;
-  }
-}
-
-
-
-.site-header {
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
-  padding: .5rem 1rem;
-  h1 {
-    font-size: rem-calc(19);
-    line-height: 1.26315;
-    margin-bottom: 0;
-  }
-  .site-nav {
-    margin-left: auto;
-  }
-}
-
-h1 a {
-  color: inherit;
-  display: block;
-  padding: 1rem 0;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-
-
-
-// Site nav
-// ==================================================
-// .site-nav {
-//   // color: #ebebeb;
-//   color: #e3e3e3;
-//   // position: relative;
-// }
-
-.site-nav-list {
-  display: flex;
-  font-size: rem-calc(16);
-  // justify-content: flex-end;
-  line-height: 1.6111;
-  list-style-type: none;
-  margin-bottom: 0;
-  // padding: 0.5em 1em;
-  // position: absolute;
-  // right: 0;
-  li + li {
-    margin-left: .5em;
-    margin-left: 1em;
-  }
-  a {
-    color: inherit;
-    display: inline-block;
-    opacity: 0.8;
-    padding: .875em .5em;
-    padding: 1em .5em;
-    text-decoration: none;
-    transition: opacity .125s ease-out;
-    &:hover {
-      opacity: 1;
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-    }
-  }
-  @include breakpoint(large) {
-    font-size: rem-calc(18);
   }
 }
