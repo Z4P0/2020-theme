@@ -1,3 +1,5 @@
+@import "frontpage";
+
 // Layout
 // ==================================================
 footer {
@@ -9,96 +11,6 @@ footer {
   }
 }
 
-
-
-// Landing page
-// ==================================================
-
-.frontpage {
-  .site-header {
-    padding: 0;
-    h1 {
-      @include show-for-sr;
-    }
-  }
-  .site-nav {
-    color: #e3e3e3;
-    padding: .5rem 1rem;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-}
-
-#hero-header {
-  background-color: #181818;
-  color: #e3e3e3;
-  min-height: 98.5vh;
-  padding: 42vh 3rem 20vh;
-  font-size: rem-calc(26);
-  p {
-    &:first-of-type {
-      // font-size: rem-calc(26);
-      font-size: inherit;
-      line-height: 1.1538;
-      margin-bottom: 0.25em;
-    }
-    + p {
-      // font-size: rem-calc(20);
-      font-size: 0.7692em;
-      line-height: 1.25;
-      margin-bottom: rem-calc(10);
-    }
-  }
-  ul {
-    font-family: "Source Code Pro", monospace;
-    // font-size: rem-calc(15);
-    // font-size: 0.9375em;
-    font-size: 0.5769em;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    &::before {
-      content: "[";
-    }
-    &::after {
-      content: "]";
-    }
-  }
-  li {
-    display: inline-block;
-    // add a "," after each li except the last one
-    &:not(:last-of-type) {
-      &::after {
-        content: ",";
-      }
-    }
-  }
-  abbr {
-    text-decoration: none;
-    &::before {
-      content: "'";
-    }
-    &::after {
-      content: "'";
-    }
-  }
-
-  @include breakpoint(small-landscape) {
-    padding-left: 15vw;
-    padding-right: 15vw;
-  }
-  @include breakpoint(medium) {
-    padding-left: 20vw;
-    padding-right: 20vw;
-  }
-  @include breakpoint(xlarge) {
-    font-size: rem-calc(30);
-    // font-size: rem-calc(34);
-    padding-left: 25vw;
-    padding-right: 25vw;
-  }
-}
 
 main {
   p, ul, ol {
@@ -122,9 +34,6 @@ main > header,
     padding-right: 25vw;
   }
 }
-
-
-
 
 
 
