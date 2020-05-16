@@ -15,17 +15,18 @@ html(lang="en").no-js
 
     a(href="#main").show-for-sr Skip to main content
 
-    .container
-      block container
-        header
+    block container
+      .container
+        header.site-header
           h1 Luis Rosario
 
-        nav.site-nav
-          ul.site-nav-list
-            li
-              a(href="base.html") About
-            li
-              a(href="base.html") Workshop
+          nav.site-nav
+            h2.show-for-sr Site Navigation
+            ul.site-nav-list
+              li
+                a(href="base.html") About
+              li
+                a(href="base.html") Workshop
 
         main#main
           block main

@@ -1,44 +1,47 @@
 extends base.pug
 
 block container
-  header
-    h1.show-for-sr Luis Rosario
+  .container
 
-  nav.site-nav
-    ul.site-nav-list
-      li
-        a(href="base.html") About
-      li
-        a(href="base.html") Workshop
+    header.site-header
+      h1.show-for-sr Luis Rosario
 
-  main#main
-    header#hero-header
+      nav.site-nav
+        h2.show-for-sr Site Navigation
+        ul.site-nav-list
+          li
+            a(href="base.html") About
+          li
+            a(href="base.html") Workshop
+
+    main#main
+      header#hero-header
+        p
+          strong Luis Rosario
+        p Web Developer
+        ul
+          li
+            abbr(title="Hyper-Text Markup Language") HTML
+          li
+            abbr(title="Cascading Style Sheets") CSS
+          li
+            abbr(title="JavaScript") JS
+          li
+            abbr(title="User Interface") UI
+          li
+            abbr(title="User Experience") UX
+
+      .content
+        p Born in Mexico, raised in New York State. I help make sure websites at the University of Rochester are accessible, performant, and beautiful.
+
+        //- ul
+          li
+            a(href="https://github.com/Z4P0/") Github
+          li
+            a(href="https://open.spotify.com/user/leftsumo") Spotify
+          li
+            a(href="https://www.last.fm/user/space_monk-e") Last.fm
+
+    footer
       p
-        strong Luis Rosario
-      p Web Developer
-      ul
-        li
-          abbr(title="Hyper-Text Markup Language") HTML
-        li
-          abbr(title="Cascading Style Sheets") CSS
-        li
-          abbr(title="JavaScript") JS
-        li
-          abbr(title="User Interface") UI
-        li
-          abbr(title="User Experience") UX
-
-    .content
-      p Born in Mexico, raised in New York State. I help make sure websites at the University of Rochester are accessible, performant, and beautiful.
-
-      //- ul
-        li
-          a(href="https://github.com/Z4P0/") Github
-        li
-          a(href="https://open.spotify.com/user/leftsumo") Spotify
-        li
-          a(href="https://www.last.fm/user/space_monk-e") Last.fm
-
-  footer
-    p
-      small &copy; 2020
+        small &copy; 2020
