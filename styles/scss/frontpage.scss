@@ -1,8 +1,19 @@
+@import "settings/settings";
+@import "util/util";
+
 .frontpage {
   .site-header {
     padding: 0;
     h1 {
-      @include show-for-sr;
+      /* https://webaim.org/techniques/css/invisiblecontent/ */
+      clip: rect(1px, 1px, 1px, 1px);
+      clip-path: inset(50%);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
     }
   }
   .site-nav {
