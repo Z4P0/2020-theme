@@ -140,17 +140,6 @@ h1 a {
     .site-nav-list {
       font-size: 1.125rem; } }
 
-.site-footer {
-  padding: 1rem; }
-  .site-footer p {
-    margin-bottom: 0;
-    text-align: right;
-    opacity: 0.5; }
-  @media print, screen and (min-width: 64em) {
-    .site-footer {
-      padding-left: 5vw;
-      padding-right: 5vw; } }
-
 header h1 {
   margin-bottom: 0; }
 
@@ -191,3 +180,14 @@ main > div {
     .main h1 {
       font-size: 2.625rem;
       line-height: 1.023809; } }
+
+.site-footer {
+  padding: 1rem; }
+  .site-footer p {
+    margin-bottom: 0;
+    text-align: right;
+    opacity: 0.5; }
+  @media print, screen and (min-width: 64em) {
+    .site-footer {
+      padding-left: 5vw;
+      padding-right: 5vw; } }
