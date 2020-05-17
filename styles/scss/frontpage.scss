@@ -23,6 +23,11 @@
     right: 0;
     top: 0;
   }
+  @include breakpoint(large) {
+    .site-nav {
+      padding-right: 5vw;
+    }
+  }
 }
 
 #hero-header {

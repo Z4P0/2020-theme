@@ -104,6 +104,10 @@ a {
     margin-bottom: 0; }
   .site-header .site-nav {
     margin-left: auto; }
+  @media print, screen and (min-width: 64em) {
+    .site-header {
+      padding-left: 5vw;
+      padding-right: 5vw; } }
 
 h1 a {
   color: inherit;

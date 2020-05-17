@@ -11,6 +11,10 @@
   .site-nav {
     margin-left: auto;
   }
+  @include breakpoint(large) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 }
 
 h1 a {
