@@ -69,3 +69,6 @@
       font-size: 1.875rem;
       padding-left: 25vw;
       padding-right: 25vw; } }
+
+#hero-header + .content {
+  padding-top: 3rem; }

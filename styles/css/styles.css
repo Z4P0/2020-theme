@@ -100,8 +100,7 @@ a {
   padding: .5rem 1rem; }
   .site-header h1 {
     font-size: 1.1875rem;
-    line-height: 1.26315;
-    margin-bottom: 0; }
+    line-height: 1.26315; }
   .site-header .site-nav {
     margin-left: auto; }
   @media print, screen and (min-width: 64em) {
@@ -148,24 +147,43 @@ h1 a {
     text-align: right;
     opacity: 0.5; }
 
+header h1 {
+  margin-bottom: 0; }
+
 main p, main ul, main ol {
   max-width: 35.4em; }
 
 main > header,
-.content {
-  padding: 4em 3em; }
+main > div {
+  padding-left: 3rem;
+  padding-right: 3rem; }
   @media print, screen and (min-width: 35.5em) {
     main > header,
-    .content {
+    main > div {
       padding-left: 15vw;
       padding-right: 15vw; } }
   @media print, screen and (min-width: 40em) {
     main > header,
-    .content {
+    main > div {
       padding-left: 20vw;
       padding-right: 20vw; } }
   @media screen and (min-width: 75em) {
     main > header,
-    .content {
+    main > div {
       padding-left: 25vw;
       padding-right: 25vw; } }
+
+main > header {
+  padding-top: 10rem;
+  padding-bottom: 2rem; }
+
+main > div {
+  padding-top: 2rem;
+  padding-bottom: 4rem; }
+
+.main {
+  min-height: 80vh; }
+  @media print, screen and (min-width: 64em) {
+    .main h1 {
+      font-size: 2.625rem;
+      line-height: 1.023809; } }
