@@ -5,4 +5,8 @@
     text-align: right;
     opacity: 0.5;
   }
+  @include breakpoint(large) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 }
