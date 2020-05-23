@@ -6,7 +6,7 @@ html(lang="en").no-js
     meta(name="viewport", content="width=device-width, initial-scale=1")
     block title
       title Luis Rosario
-    meta(name="description", content="description")
+      meta(name="description", content="description")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap")
     link(rel="preload", href="../../styles/css/styles.css", as="style")
     link(rel="stylesheet", href="../../styles/css/styles.css")
@@ -24,7 +24,8 @@ html(lang="en").no-js
 
           nav.site-nav
             h2.show-for-sr Site Navigation
-            ul.site-nav-list
+            ul
+              //- li.site-nav-list--active
               li
                 a(href="base.html") About
               li
