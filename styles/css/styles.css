@@ -128,7 +128,6 @@ h1 a {
     color: inherit;
     display: inline-block;
     opacity: 0.8;
-    padding: .875em .5em;
     padding: 1em .5em;
     text-decoration: none;
     transition: opacity .125s ease-out; }
@@ -139,6 +138,11 @@ h1 a {
   @media print, screen and (min-width: 64em) {
     .site-nav-list {
       font-size: 1.125rem; } }
+
+.site-nav-list--active a {
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; }
 
 header h1 {
   margin-bottom: 0; }

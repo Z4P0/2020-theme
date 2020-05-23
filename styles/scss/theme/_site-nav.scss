@@ -11,7 +11,6 @@
     color: inherit;
     display: inline-block;
     opacity: 0.8;
-    padding: .875em .5em;
     padding: 1em .5em;
     text-decoration: none;
     transition: opacity .125s ease-out;
@@ -24,5 +23,13 @@
   }
   @include breakpoint(large) {
     font-size: rem-calc(18);
+  }
+}
+
+.site-nav-list--active {
+  a {
+    opacity: 1;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
   }
 }
