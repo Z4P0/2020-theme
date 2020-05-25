@@ -1,9 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <g fill="none" fill-rule="evenodd">
-    <path fill="#363636" d="m0 0h16v16h-16z"/>
-    <g fill="#ebebeb">
-      <path fill-rule="nonzero" d="m7.44 11v-1.24h-2.9v-5.28h-1.47v6.52zm2.73 0v-2.35h.77l1.25 2.35h1.65l-1.47-2.61c.69-.31 1.16-.92 1.16-1.88 0-1.55-1.14-2.03-2.52-2.03h-2.31v6.52zm.72-3.52h-.72v-1.83h.72c.78 0 1.19.22 1.19.86s-.41.97-1.19.97z"/>
-      <path d="m0 15h16v1h-16z"/>
-    </g>
+  <style>
+    g {fill: #363636;}
+    @media (prefers-color-scheme: dark) {
+      g {fill: #ebebeb;}
+    }
+  </style>
+  <g fill-rule="evenodd">
+    <path fill-rule="nonzero" d="m7.44 11v-1.24h-2.9v-5.28h-1.47v6.52zm2.73 0v-2.35h.77l1.25 2.35h1.65l-1.47-2.61c.69-.31 1.16-.92 1.16-1.88 0-1.55-1.14-2.03-2.52-2.03h-2.31v6.52zm.72-3.52h-.72v-1.83h.72c.78 0 1.19.22 1.19.86s-.41.97-1.19.97z"/>
+    <path d="m0 15h16v1h-16z"/>
   </g>
 </svg>
