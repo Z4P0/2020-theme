@@ -2,3 +2,10 @@
 @import "site-nav";
 @import "site-main";
 @import "site-footer";
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  background-image: url("../../assets/noise-z.png");
+}

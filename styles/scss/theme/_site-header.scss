@@ -1,28 +1,34 @@
 .site-header {
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
-  padding: .5rem 1rem;
+  padding: 50% 3em 3em;
+  padding: 20vh 20vw 10vh;
   h1 {
-    font-size: rem-calc(19);
-    line-height: 1.26315;
+    font-size: 2.25em;
+    font-weight: bold;
+    color: $black;
+    letter-spacing: -0.5px;
+    line-height: 1.25;
+    margin: 0 0 .15em;
   }
-  .site-nav {
-    margin-left: auto;
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    &:focus,
+    &:hover, {
+      opacity: 1;
+      text-decoration: underline;
+    }
   }
-  @include breakpoint(large) {
-    padding-left: 5vw;
-    padding-right: 5vw;
+  p {
+    color: $black;
+    font-family: "Source Code Pro", monospace;
+    font-size: 1.25em;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+    margin: 0 0 1.5em;
+    opacity: 0.55;
   }
-}
-
-h1 a {
-  color: inherit;
-  display: block;
-  padding: 1rem 0;
-  text-decoration: none;
-  &:focus,
-  &:hover {
-    text-decoration: underline;
+  @include breakpoint(medium) {
+    padding-left: 10vw;
   }
 }
