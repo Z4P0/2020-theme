@@ -1,0 +1,42 @@
+extends base.pug
+
+block title
+  title Luis Rosario
+  meta(name="description", content="Web developer in Rochester, NY.")
+
+//- block styles
+  link(rel="stylesheet", href="../../styles/css/frontpage.css")
+
+block container
+    header.site-header
+      h1
+        a(href="index.html") Luis Rosario
+      p User-Interface Engineer / Creative
+
+      nav.site-nav
+        h2.show-for-sr Site Navigation
+        ul.site-nav-list
+          li
+            a(href="#") Select Work
+          li
+            a(href="#") Playground
+          li
+            a(href="about.html") About
+
+    main#main.site-main
+      article.article.content
+        h2 About
+        p Born in Mexico, raised in New York State. I help make sure websites at the University of Rochester are accessible, performant, and beautiful.
+        p When it comes to websites I guide myself by what Sir Tim Berners-Lee said,
+        blockquote
+          p The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
+          cite Tim Berners-Lee, <a href="https://www.w3.org/standards/webdesign/accessibility">Accessiblity</a>
+        p I create sites with Sketch, Sublime Text, Terminal, and Firefox Developer Edition. I like to write markup using pug, styles in scss, and modern JavaScript. You can learn more about what I use to create sites on my uses page, <a href="/uses/">/uses</a>.
+        p Articles that have shaped how I approach websites I've saved to my bookmarks page, <a href="/bookmarks/">/bookmarks</a>.
+        hr
+        p Site built with <a href="https://www.11ty.dev/">11ty</a> using <a href="https://pugjs.org/api/getting-started.html">pug</a> templates. Deployed using <a href="https://www.netlify.com/">Netlify</a>.
+
+
+    footer.site-footer
+      p
+        small &copy; 2021

@@ -1,56 +1,57 @@
-// header {
-//   h1 {
-//     margin-bottom: 0;
-//   }
-// }
+.site-main {
+  .content {
+    padding: 3em 15vw 5em;
+  }
+}
+
+.article {
+  h2 {
+    margin: 0 0 1.75em;
+    + p {
+      // font-size: 22px;
+      font-size: 1.375em;
+      letter-spacing: -0.1px;
+      // line-height: 32px;
+      line-height: 1.454545;
+      margin-right: -1em;
+      margin-bottom: 1.5em;
+    }
+  }
+
+  p {
+    max-width: 25em;
+  }
+}
 
 
-// main {
-//   p, ul, ol {
-//     max-width: 35.4em;
-//   }
-// }
 
 
-// main {
-//   // horizontal padding
-//   // ----------------------------------------
-//   > header,
-//   > div {
-//     padding-left: 3rem;
-//     padding-right: 3rem;
-//     @include breakpoint(small-landscape) {
-//       padding-left: 15vw;
-//       padding-right: 15vw;
-//     }
-//     @include breakpoint(medium) {
-//       padding-left: 20vw;
-//       padding-right: 20vw;
-//     }
-//     @include breakpoint(xlarge) {
-//       padding-left: 25vw;
-//       padding-right: 25vw;
-//     }
-//   }
-//   // // vertical padding
-//   // // ----------------------------------------
-//   // > header {
-//   //   padding-top: 10rem;
-//   //   padding-bottom: 2rem;
-//   // }
-//   // > div {
-//   //   padding-top: 2rem;
-//   //   padding-bottom: 4rem;
-//   // }
-// }
+@include breakpoint(medium) {
+  .site-main {
+    .content {
+      padding: 3em 20vw 5em;
+    }
+  }
+  .article {
+    h2 + p {
+      margin-right: -2em;
+    }
+  }
+}
 
 
-// .main {
-//   // min-height: 80vh;
-//   @include breakpoint(large) {
-//     h1 {
-//       font-size: rem-calc(42);
-//       line-height: 1.023809;
-//     }
-//   }
-// }
+@include breakpoint(large) {
+  .site-main {
+    .content {
+      padding: 3em 20vw 8em 10vw;
+    }
+  }
+  .article {
+    p {
+      max-width: 29em;
+    }
+    h2 + p {
+      margin-right: -4em;
+    }
+  }
+}

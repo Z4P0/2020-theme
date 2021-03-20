@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -25,10 +26,39 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 p, ul, ol, dl {
-  margin-top: 0; }
+  margin: 0 0 1em; }
+
+h1 {
+  font-size: 2.25em;
+  letter-spacing: -0.5px;
+  line-height: 1.25; }
+
+h2 {
+  font-size: 1.75em;
+  letter-spacing: -0.5px;
+  line-height: 1.2857; }
+
+p {
+  font-size: 1.0625em;
+  letter-spacing: 0.1px;
+  line-height: 1.4705; }
 
 a {
   transition-delay: 50ms; }
+
+figure,
+blockquote {
+  margin: 1.5em 1em; }
+
+cite:before {
+  content: "—"; }
+
+hr {
+  background: #ccc;
+  border: none;
+  height: 1px;
+  line-height: 1;
+  margin: 2.5em 0; }
 
 .show-for-sr {
   /* https://webaim.org/techniques/css/invisiblecontent/ */
@@ -42,14 +72,9 @@ a {
   position: absolute; }
 
 .site-header {
-  padding: 50% 3em 3em;
-  padding: 20vh 20vw 10vh; }
+  padding: 9em 3em 3em;
+  padding: 20vh 15vw 10vh; }
   .site-header h1 {
-    font-size: 2.25em;
-    font-weight: bold;
-    color: #2B2B2B;
-    letter-spacing: -0.5px;
-    line-height: 1.25;
     margin: 0 0 .15em; }
   .site-header a {
     display: block;
@@ -94,6 +119,35 @@ a {
       margin: 0 -.75em; }
       .site-nav-list a {
         padding: 1em; } }
+
+.site-main .content {
+  padding: 3em 15vw 5em; }
+
+.article h2 {
+  margin: 0 0 1.75em; }
+  .article h2 + p {
+    font-size: 1.375em;
+    letter-spacing: -0.1px;
+    line-height: 1.454545;
+    margin-right: -1em;
+    margin-bottom: 1.5em; }
+
+.article p {
+  max-width: 25em; }
+
+@media print, screen and (min-width: 40em) {
+  .site-main .content {
+    padding: 3em 20vw 5em; }
+  .article h2 + p {
+    margin-right: -2em; } }
+
+@media print, screen and (min-width: 64em) {
+  .site-main .content {
+    padding: 3em 20vw 8em 10vw; }
+  .article p {
+    max-width: 29em; }
+  .article h2 + p {
+    margin-right: -4em; } }
 
 .site-footer {
   padding: 1rem; }
