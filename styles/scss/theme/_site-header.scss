@@ -1,6 +1,5 @@
 .site-header {
-  padding: 9em 3em 3em;
-  padding: 20vh 15vw 10vh;
+  padding: 8em 15vw 4em;
   h1 {
     margin: 0 0 .15em;
   }
@@ -24,6 +23,9 @@
     opacity: 0.55;
   }
   @include breakpoint(medium) {
-    padding-left: 10vw;
+    padding: 16em 20vw 4em;
+  }
+  @include breakpoint(xlarge) {
+    padding-top: 19em;
   }
 }

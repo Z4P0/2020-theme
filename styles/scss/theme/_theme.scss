@@ -3,9 +3,17 @@
 @import "site-main";
 @import "site-footer";
 
-body {
-  display: grid;
-  min-height: 100vh;
-  place-items: center;
+
+.container {
   background-image: url("../../assets/noise-z.png");
+  min-height: 100vh;
+}
+.site-header,
+.site-main {
+  margin: auto;
+  max-width: 80em;
+  @include breakpoint(xxlarge) {
+    padding-left: 16em;
+    padding-right: 16em;
+  }
 }

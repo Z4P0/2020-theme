@@ -1,10 +1,9 @@
 .site-main {
-  .content {
-    padding: 3em 15vw 5em;
-  }
+  padding: 3em 15vw 5em;
 }
 
 .article {
+  max-width: max-content;  // to reign in the hr element
   h2 {
     margin: 0 0 1.75em;
     + p {
@@ -28,9 +27,7 @@
 
 @include breakpoint(medium) {
   .site-main {
-    .content {
-      padding: 3em 20vw 5em;
-    }
+    padding: 3em 20vw 5em;
   }
   .article {
     h2 + p {
@@ -41,14 +38,9 @@
 
 
 @include breakpoint(large) {
-  .site-main {
-    .content {
-      padding: 3em 20vw 8em 10vw;
-    }
-  }
   .article {
     p {
-      max-width: 29em;
+      max-width: 30em;
     }
     h2 + p {
       margin-right: -4em;
