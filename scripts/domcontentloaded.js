@@ -9,21 +9,21 @@ sourceSans.load().then(() => {
 });
 
 
-// ----------------------------------------
-// highlight the nav item
-// ----------------------------------------
-const locationURL = location.origin + location.pathname;
+// // ----------------------------------------
+// // highlight the nav item
+// // ----------------------------------------
+// const locationURL = location.origin + location.pathname;
 
-const navLinks = document.querySelectorAll('.site-nav-list a');
+// const navLinks = document.querySelectorAll('.site-nav-list a');
 
 
-for (var i = 0; i < navLinks.length; i++) {
+// for (var i = 0; i < navLinks.length; i++) {
 
-  let anchor = navLinks[i];
+//   let anchor = navLinks[i];
 
-  if (anchor.href == locationURL) {
-    anchor.parentElement.classList.toggle('site-nav-list--active');
-    break;
-  }
+//   if (anchor.href == locationURL) {
+//     anchor.parentElement.classList.toggle('site-nav-list--active');
+//     break;
+//   }
 
-}
+// }
